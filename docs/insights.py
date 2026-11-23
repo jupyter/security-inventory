@@ -182,7 +182,7 @@ def owner_of(repo: dict) -> str | None:
     return repo["owner"] if repo["owner"] not in (None, "", "None") else None
 
 
-NO_OWNER = "no owner"  # what the owner columns show for a repo without one
+NO_OWNER = "no owner"  # what the site shows for a repo without one, the same everywhere
 
 
 def owner_link(owner: str | None) -> str:
@@ -860,7 +860,7 @@ def repo_page(data: Data, name: str) -> str:
         commit=repo["content"]["commit"][:7],
         sha=repo["content"]["commit"],
         fork=" · fork" if repo["is_fork"] else "",
-        owner=f"owned by {owner_link(owner_of(repo))}" if owner_of(repo) else "no owner",
+        owner=f"owned by {owner_link(owner_of(repo))}" if owner_of(repo) else NO_OWNER,
         packages="; ".join(
             f"{package(p['system'] + ':' + p['name'])}, {stats(p['system'] + ':' + p['name'], n(p['downloads_last_month']))} downloads/month,"
             f" {n(p['dependents'])} dependents, last published {p['last_published'] or 'unknown'}"
