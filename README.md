@@ -33,6 +33,7 @@ Eight scripts run in order (they depend on each other):
 ## The columns
 
 - **kind**: package, application, tooling, deployment, documentation, example or other.
+- **owner**: its Owner custom property on GitHub.
 - **downloads/month** and **dependents**: for the repository's most downloaded package.
 - **image** and **all-time pulls**: for the repository's most pulled container image.
 - **used in CI**: how many other Jupyter repositories run its actions or build tools without pinning them
@@ -45,7 +46,7 @@ Eight scripts run in order (they depend on each other):
 
 A topic asks one question about every repository, like "does it check its workflows with zizmor?", and answers
 with a status: done, partial, missing or not applicable. Each topic has a page, and every organization and
-repository page shows how it does. There are five for now:
+repository page shows how it does. The topics for now:
 
 - **zizmor**, run as its GitHub Action, as a command in a workflow or as a pre-commit hook.
 - **SECURITY.md**, in the repository or in the organization's `.github` repository, for the repositories that ship a
@@ -55,6 +56,7 @@ repository page shows how it does. There are five for now:
 - **npm trusted publishing**, for the latest version of each npm package.
 - **Supported Python**: the Requires-Python of the latest release of each PyPI package leaves out the Python versions
   that no longer get security fixes.
+- **Owner**: the repository's Owner custom property is set, and not "None".
 
 ## Caveats
 
@@ -85,10 +87,29 @@ python scripts/7_table.py
 python scripts/8_topics.py
 ```
 
+Then build the site with `sphinx-build -W docs docs/_build`, and open `docs/_build/index.html`.
+
+### With pixi
+
+[pixi](https://pixi.sh) installs Python 3.14, the GitHub CLI and the same dependencies, and runs each step as a task.
+`pixi task list` shows them all, with the steps first, in order.
+
+```bash
+pixi run pipeline        # steps 1 to 8
+pixi run 2-scan ~/clones # one step; the clone directory is ~/clones by default
+pixi run outputs         # steps 6 to 8
+pixi run test
+pixi run lint
+pixi run docs            # build the site into docs/_build
+pixi run docs-watch      # serve the site at http://127.0.0.1:8000 and rebuild on changes
+```
+
+Read the Docs builds the site the same way, with `.readthedocs.yaml`.
+
 ## Daily updates
 
 A GitHub Actions workflow (`update.yml`) reruns the whole pipeline every morning, commits what changed in
-`output/` and republishes the site. It needs a `DEEPSEEK_API_KEY` repository secret.
+`output/`, and Read the Docs rebuilds the site. It needs a `DEEPSEEK_API_KEY` repository secret.
 
 Step 5 only labels repositories it hasn't labeled yet with the current model, so a daily run costs almost
 nothing. To relabel everything, switch to another model or delete `output/classification.json`.
@@ -98,9 +119,9 @@ nothing. To relabel everything, switch to another model or delete `output/classi
 Change the scripts, never `output/` by hand. Rerun the pipeline from the step you changed, run `pytest`,
 and commit the new outputs with your change. CI runs the tests and checks that the outputs of steps 6 to 8 are up to date.
 
-The daily update and the site build install `requirements.txt` and `requirements-docs.txt`, which pin every
-dependency, including indirect ones, to an exact version. After changing the dependencies in `pyproject.toml`,
-regenerate them with the command on the second line of each file.
+The daily update installs `requirements.txt`, which pins every dependency, including indirect ones, to an exact
+version. Read the Docs installs `pixi.lock`. After changing the dependencies in `pyproject.toml`, regenerate
+`requirements.txt` with the command on its second line, and `pixi.lock` with `pixi lock`.
 
 ## License
 

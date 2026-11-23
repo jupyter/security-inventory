@@ -7,7 +7,7 @@ GitHub, PyPI, npm, pypistats.org, deps.dev, Docker Hub, Quay, an LLM
         │
         ▼
 scripts/1..8  ──►  output/*.json, *.csv, *.txt  ──►  docs/insights.py  ──►  Sphinx site
- (pipeline)        (committed to git)                (writes the pages)      (GitHub Pages)
+ (pipeline)        (committed to git)                (writes the pages)      (Read the Docs)
 ```
 
 ## Rules
@@ -61,7 +61,7 @@ All in `output/`. Repos are named `org/repo`.
 
 | File | Shape |
 |---|---|
-| `repos.json` | `fetched_on`, `orgs`, and `repos`: full_name, org, name, description, is_fork. |
+| `repos.json` | `fetched_on`, `orgs`, and `repos`: full_name, org, name, description, is_fork, owner. |
 | `scan.json` | `{repo: facts from step 2}`. |
 | `packages.json` | `accepted`: system (PYPI or NPM), name, repo, reason, downloads_last_month, dependents, last_published, and for the latest release (the default version): latest_published, and `attested` and `requires_python` (PyPI) or `trusted_publishing` (npm). `rejected`: candidates that were not confirmed. |
 | `images.json` | `images`: registry, namespace, name, tag, last_published, pulls (all time), reference, repo, reason. |
@@ -142,10 +142,10 @@ so it is shown as text and never becomes HTML, a link or a substitution.
 | Workflow | When | What |
 |---|---|---|
 | `ci.yml` | each push to `main` and each pull request | Formatting (pre-commit, ruff), the tests, and a check that the outputs of steps 6 to 8 match the code. Steps 1 to 5 need the network or an LLM, so they are not rerun. |
-| `docs.yml` | each push to `main` and each pull request; on `main` it also publishes | Builds the site with warnings as errors. |
-| `update.yml` | every day | Runs steps 1 to 8, commits `output/`, then calls `docs.yml`. |
+| `update.yml` | every day | Runs steps 1 to 8 and commits `output/`. Read the Docs rebuilds the site on the push. |
 
-Actions are pinned to commit SHAs.
+Actions are pinned to commit SHAs. Read the Docs builds the site with warnings as errors (see `.readthedocs.yaml`) and
+publishes it.
 
 ## Adding things
 
