@@ -595,9 +595,11 @@ def topic_group_table(data: Data, topic: dict, column: str) -> Table:
     header = [column, "progress", "repos it applies to", "done", "partial", "missing"]
     cells = []
     for key, _, applies, *statuses in rows:
-        # Each count links to the repos it counts in this page's repository table. Repos with no owner have no filter.
-        hrefs = [repos_href("", **{param: key}, status=status) for status in (None, "done", "partial", "missing")]
-        counts = [count_link(count, href) if key else count for count, href in zip([applies, *statuses], hrefs)]
+        # Each count links to the repos it counts in this page's repository table. tables.js filters on the text of
+        # the owner column, which says "no owner" for the repos without one.
+        value = key or "no owner"
+        hrefs = [repos_href("", **{param: value}, status=status) for status in (None, "done", "partial", "missing")]
+        counts = [count_link(count, href) for count, href in zip([applies, *statuses], hrefs)]
         cells.append([linked(key), bars[key], *counts])
     return Table(header, rows, cells)
 
