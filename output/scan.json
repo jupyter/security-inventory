@@ -2894,7 +2894,7 @@
     "security_policy": null
   },
   "jupyter-book/mystmd": {
-    "head": "e6da429f226e8ac9375eb6c2485a971b9cad771a",
+    "head": "29234cccc35d06210e78da28d92c7364328bbf70",
     "n_files": 1802,
     "file_types": {
       "docs": 477,
@@ -3827,13 +3827,13 @@
     "security_policy": null
   },
   "jupyter-server/gateway_provisioners": {
-    "head": "90e2d48461e5aebfaeb89ce0c3e3dbd6cc27d5c5",
-    "n_files": 159,
+    "head": "2d478cfd0583c6617b1f2b3240bbfd4034fa53b2",
+    "n_files": 160,
     "file_types": {
       "other": 12,
       "config": 42,
       "docs": 38,
-      "code": 60,
+      "code": 61,
       "web": 3,
       "media": 4
     },
@@ -6711,7 +6711,7 @@
     "security_policy": null
   },
   "jupyter/docker-stacks": {
-    "head": "fe190c9e10d341558f637d9e7c2e2dff6145ef6b",
+    "head": "899bb1616a1ab37c82d8a574f426bc6dcb0adb18",
     "n_files": 312,
     "file_types": {
       "other": 59,
@@ -6753,7 +6753,7 @@
       "cargo-bins/cargo-binstall@5885714d0a40a14b2535c6ffc051fd8e49aa9665",
       "christian-korneck/update-container-description-action@d36005551adeaba9698d8d67a296bd16fa91f8e8",
       "github/codeql-action@33d7b85da1a04171e211befe2c739303b9a4c066",
-      "ossf/scorecard-action@fa7117db83c52d787ae5a89f350999701505d78e",
+      "ossf/scorecard-action@23f22cd43608bae7a1f1fa2603d7314dee9538a5",
       "sigstore/cosign-installer@756fe2d284c7292c4e9b62c8a28f1e5629c59532",
       "stefanzweifel/git-auto-commit-action@d0b01107b5db882071f96de5dd4b54961ea93f4c"
     ],
@@ -8581,7 +8581,7 @@
     "security_policy": null
   },
   "jupyter/security-inventory": {
-    "head": "3aa26d2b13b3256501751981299050058b0bdfc3",
+    "head": "e9e5aa835c7c6a32fb6560a1a6deedf85da647b1",
     "n_files": 66,
     "file_types": {
       "config": 14,
@@ -11333,7 +11333,7 @@
     "security_policy": null
   },
   "jupyterhub/configurable-http-proxy": {
-    "head": "ced01f5b5788c17635d428fd4851e2bd23ce4faa",
+    "head": "60697a8adf2d7a7b39f9dfcef339143fe39f127e",
     "n_files": 42,
     "file_types": {
       "other": 9,
@@ -12594,7 +12594,7 @@
     "security_policy": null
   },
   "jupyterhub/mybinder.org-deploy": {
-    "head": "c1e991dd0bb63cb49d9095d68af2fb86090aefac",
+    "head": "051f7103145b995005ab10f149106bff3e4dbf43",
     "n_files": 315,
     "file_types": {
       "other": 42,
@@ -14704,7 +14704,7 @@
     "security_policy": null
   },
   "jupyterlab/jupyter-ai-lite": {
-    "head": "fb14aa47d3f0663ac467fad858f0abb2e8d87c4c",
+    "head": "4aabc11cf97572f219317e96ae9c3cd71c6c68a1",
     "n_files": 158,
     "file_types": {
       "config": 35,
