@@ -189,3 +189,12 @@ def test_the_topics_and_counts_of_an_owner_page_link_to_their_repos_on_the_topic
     assert topic == '<a href="../topics/t.html?owner=Jupyter%20Book#repositories">T &amp; co</a>'
     assert done == '<a href="../topics/t.html?owner=Jupyter%20Book&amp;status=done#repositories">1</a>'
     assert partial == "0"  # nothing to list
+
+
+def test_the_owner_table_links_the_repos_without_an_owner_to_the_filter_on_their_owner_column():
+    data = make_data(make_repo("o/r", []))
+    data.results = {"t": {"o/r": {"status": "missing"}}}
+    owner, _, applies, *_ = insights.topic_group_table(data, {"id": "t"}, "owner").cells[0]
+    # tables.js filters on the text of the owner column of the repository table.
+    assert owner == insights.owner_link(None) == "no owner"
+    assert applies == '<a href="?owner=no%20owner#repositories">1</a>'

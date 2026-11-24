@@ -182,9 +182,12 @@ def owner_of(repo: dict) -> str | None:
     return repo["owner"] if repo["owner"] not in (None, "", "None") else None
 
 
+NO_OWNER = "no owner"  # what the site shows for a repo without one, the same everywhere
+
+
 def owner_link(owner: str | None) -> str:
-    if not owner or owner == "None":
-        return "no owner"
+    if not owner or owner in ("None", NO_OWNER):
+        return NO_OWNER
     return f"[{plain(owner)}](/owners/{owner_slug(owner)}.md)"
 
 
@@ -580,7 +583,7 @@ def topic_group_table(data: Data, topic: dict, column: str) -> Table:
     if column == "organization":
         group, linked, param = (lambda repo: repo["org"]), org_link, "org"
     else:
-        group, linked, param = (lambda repo: owner_of(repo) or ""), owner_link, "owner"
+        group, linked, param = (lambda repo: owner_of(repo) or NO_OWNER), owner_link, "owner"
     groups = {}
     for name in data.results[topic["id"]]:
         groups.setdefault(group(data.repos[name]), []).append(name)
@@ -595,9 +598,10 @@ def topic_group_table(data: Data, topic: dict, column: str) -> Table:
     header = [column, "progress", "repos it applies to", "done", "partial", "missing"]
     cells = []
     for key, _, applies, *statuses in rows:
-        # Each count links to the repos it counts in this page's repository table. Repos with no owner have no filter.
+        # Each count links to the repos it counts in this page's repository table. tables.js filters on the text of
+        # its column, which `key` is.
         hrefs = [repos_href("", **{param: key}, status=status) for status in (None, "done", "partial", "missing")]
-        counts = [count_link(count, href) if key else count for count, href in zip([applies, *statuses], hrefs)]
+        counts = [count_link(count, href) for count, href in zip([applies, *statuses], hrefs)]
         cells.append([linked(key), bars[key], *counts])
     return Table(header, rows, cells)
 
@@ -856,7 +860,7 @@ def repo_page(data: Data, name: str) -> str:
         commit=repo["content"]["commit"][:7],
         sha=repo["content"]["commit"],
         fork=" · fork" if repo["is_fork"] else "",
-        owner=f"owned by {owner_link(owner_of(repo))}" if owner_of(repo) else "no owner",
+        owner=f"owned by {owner_link(owner_of(repo))}" if owner_of(repo) else NO_OWNER,
         packages="; ".join(
             f"{package(p['system'] + ':' + p['name'])}, {stats(p['system'] + ':' + p['name'], n(p['downloads_last_month']))} downloads/month,"
             f" {n(p['dependents'])} dependents, last published {p['last_published'] or 'unknown'}"
