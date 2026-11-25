@@ -154,6 +154,20 @@ def plain(text) -> str:
     return " ".join(re.sub(r"([!-/:-@\[-`{-~])", r"\\\1", str(text or "")).splitlines())  # any line break ends a row
 
 
+# A Markdown link to a web page: [text](https://...)
+LINK = re.compile(r"\[([^\]]+)\]\((https://[^)\s]+)\)")
+
+
+def plain_with_links(text: str) -> str:
+    """Like plain(), but keeps paragraphs and links. Only for text written in this repository, like a topic's."""
+    paragraphs = []
+    for paragraph in text.split("\n\n"):
+        parts = LINK.split(paragraph)  # text, link text, address, text, ...
+        links = [f"[{plain(label)}]({address})" for label, address in zip(parts[1::3], parts[2::3])]
+        paragraphs.append("".join(plain(part) + link for part, link in zip(parts[::3], [*links, ""])))
+    return "\n\n".join(paragraphs)
+
+
 def n(number) -> str:
     return "unknown" if number is None else f"{number:,}"
 
@@ -677,7 +691,7 @@ def topic_page(data: Data, topic: dict) -> str:
         title=plain(topic["title"]),
         question=plain(topic["question"]),
         headline=headline,
-        detection=plain(topic["detection"]),
+        detection=plain_with_links(topic["detection"]),
         legend="\n".join(f"- {status_chip(status)} {plain(topic['meanings'][status])}" for status in STATUSES),
         owners=table("owners"),
         orgs=table("orgs"),
