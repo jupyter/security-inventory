@@ -715,6 +715,12 @@
       "partial": 0,
       "missing": 0,
       "n/a": 0
+    },
+    "pull-request-target": {
+      "done": 233,
+      "partial": 0,
+      "missing": 45,
+      "n/a": 154
     }
   }
 }

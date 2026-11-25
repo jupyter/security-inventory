@@ -57,6 +57,7 @@ repository page shows how it does. The topics for now:
 - **Supported Python**: the Requires-Python of the latest release of each PyPI package leaves out the Python versions
   that no longer get security fixes.
 - **Owner**: the repository's Owner custom property is set, and not "None".
+- **pull_request_target**: no workflow runs on this event, which GitHub now turns off by default.
 
 ## Caveats
 

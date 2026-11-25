@@ -16,6 +16,7 @@ from topics import (
     STATUSES,
     npm_trusted_publishing,
     owner,
+    pull_request_target,
     pypi_attestations,
     security_policy,
     supported_python,
@@ -29,6 +30,7 @@ TOPICS = [
     npm_trusted_publishing.TOPIC,
     supported_python.TOPIC,
     owner.TOPIC,
+    pull_request_target.TOPIC,
 ]
 HISTORY = OUTPUT / "topics_history.json"
 
