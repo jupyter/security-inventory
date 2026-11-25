@@ -677,8 +677,9 @@ def topic_page(data: Data, topic: dict) -> str:
         title=plain(topic["title"]),
         question=plain(topic["question"]),
         headline=headline,
-        detection=plain(topic["detection"]),
-        legend="\n".join(f"- {status_chip(status)} {plain(topic['meanings'][status])}" for status in STATUSES),
+        # Written in this repository, not taken from repos, so it can use Markdown: paragraphs, links, code.
+        detection=topic["detection"],
+        legend="\n".join(f"- {status_chip(status)} {topic['meanings'][status]}" for status in STATUSES),
         owners=table("owners"),
         orgs=table("orgs"),
         legend_of_kinds=LEGEND,
