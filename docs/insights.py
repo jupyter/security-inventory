@@ -87,9 +87,9 @@ html_theme.sidebar_secondary.remove: true
 
 # {title}
 
-{question}
+**{question}**
 
-{headline}
+{status}
 
 {detection}
 
@@ -247,11 +247,6 @@ def dependents(top: str | None, count: str) -> str:
 def date(day: str | None) -> str:
     """A date in a table, kept on one line: '2026-10-28' would otherwise wrap at its hyphens."""
     return f"[{day}]{{.date}}" if day else ""
-
-
-def counted(number: int, one: str, many: str) -> str:
-    """counted(1, "is a boundary", "are boundaries") -> '1 is a boundary'."""
-    return f"{number} {one if number == 1 else many}"
 
 
 def summary_sentence(subject: str, counts: dict) -> str:
@@ -660,15 +655,16 @@ def topic_page(data: Data, topic: dict) -> str:
     for part, table in tables.items():
         table.write(f"{stem}-{part}")
 
+    # The topic's row of the summary tables, as a plain Markdown table: one row needs no sorting or search.
     counts = topic_counts(data, topic, data.results[topic["id"]])
-    applies = counts["done"] + counts["partial"] + counts["missing"]
-    headline = (
-        f"It applies to {counted(applies, 'repository', 'repositories')}:"
-        f" {counts['done']} done, {counts['partial']} partial and {counts['missing']} missing."
+    linked = [  # not the n/a count: the tables below leave those repos out
+        count_link(counts[status], repos_href("", status=status)) if status != NOT_APPLICABLE else counts[status]
+        for status in STATUSES
+    ]
+    status = (
+        "| topic | progress | done | partial | missing | not applicable |\n|---|---|---|---|---|---|\n"
+        f"| {plain(topic['title'])} | {progress_cell(counts)} | {' | '.join(map(str, linked))} |"
     )
-    if counts[NOT_APPLICABLE]:
-        not_applicable = counted(counts[NOT_APPLICABLE], "is not applicable", "are not applicable")
-        headline += f" {not_applicable} and left out of the tables."
 
     def table(part: str, **filters) -> str:
         return csv_table(f"{stem}-{part}", **filters) if len(tables[part]) else NO_ROWS
@@ -676,7 +672,7 @@ def topic_page(data: Data, topic: dict) -> str:
     return TOPIC_PAGE.format(
         title=plain(topic["title"]),
         question=plain(topic["question"]),
-        headline=headline,
+        status=status,
         # detection and status meanings are inlined so they can use markdown
         detection=topic["detection"],
         legend="\n".join(f"- {status_chip(status)} {topic['meanings'][status]}" for status in STATUSES),
