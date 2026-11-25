@@ -4,6 +4,12 @@ GitHub will by default start blocking workflow runs triggered by the `pull_reque
 
 Most workflows can move to the `pull_request` event, which runs without secrets for pull requests from forks. Some need `pull_request_target`, like ones that label pull requests or post checks on them. Keep those only if they never run the pull request's code, and mark each one as reviewed with a `# zizmor: ignore[dangerous-triggers]` comment. A repository whose `pull_request_target` workflows are all marked shows as partial: it still needs an event policy that allows the event. Read more in [GitHub's guide to `pull_request_target`](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target), and see which runs the policy would block with [policy insights](https://docs.github.com/en/actions/how-tos/administer/control-workflow-execution).
 
+To list the workflows still to fix, run this in a clone of the repository. It prints each workflow that runs on `pull_request_target` and is not marked as reviewed:
+
+```sh
+for f in .github/workflows/*.y*ml; do grep -qE '^ *(on:.*|- *)?pull_request_target' "$f" && ! grep -q 'zizmor: *ignore\[[^]]*dangerous-triggers' "$f" && echo "$f"; done
+```
+
 To detect workflows using `pull_request_target`, we look for `pull_request_target` in the `on` key of each workflow in `.github/workflows`, and for the zizmor comment anywhere in the workflow:
 
 ```yaml
