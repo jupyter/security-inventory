@@ -1,4 +1,4 @@
-A workflow that is triggered by the `pull_request_target` event gets the repository's secrets and a token that can write to it. As long as the workflow does not ever run code from the pull request, this is safe. However, if the workflow runs any code from the PR (for example, checking out and building the PR's code), the PR can exfiltrate the secrets. Most workflows can move to the `pull_request` event, which runs without secrets for pull requests from forks. See [GitHub's guide to `pull_request_target`](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target) and [zizmor's `dangerous-triggers` audit](https://docs.zizmor.sh/audits/#dangerous-triggers) for more info.
+A workflow that is triggered by the `pull_request_target` event has access to the repository's secrets. It is important that such a workflow never run code from the pull request, or be influenced by being in the pull request's context, since a PR can then exfiltrate the secrets. Most workflows can move to the `pull_request` event, which runs without secrets for pull requests from forks. See [GitHub's guide to `pull_request_target`](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target) and [zizmor's `dangerous-triggers` audit](https://docs.zizmor.sh/audits/#dangerous-triggers) for more info.
 
 GitHub will start blocking workflow runs triggered by `pull_request_target` by default starting December 2, 2026 (though we may extend that deadline with an org-wide policy).
 
@@ -25,3 +25,5 @@ To list the workflows in a repo that still need to be fixed, run this in the rep
 ```sh
 for f in .github/workflows/*.y*ml; do grep -qE '^ *(on:.*|- *)?pull_request_target' "$f" && ! grep -q 'zizmor: *ignore\[[^]]*dangerous-triggers' "$f" && echo "$f"; done
 ```
+
+To see recent workflow runs in a GitHub org that would be blocked by this change, go to https://github.com/organizations/[ORG]/settings/actions/rules/insights.
