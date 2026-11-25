@@ -156,6 +156,7 @@ publishes it.
 - **A column in the repo tables:** add it in `7_table.py` and in `repo_rows` of `insights.py`.
 - **A security topic:** write a module in `scripts/topics/` like `zizmor.py` and add it to `TOPICS` in step 8. If it needs a
   fact step 2 does not keep, such as a word to find in workflows, add it to `MENTIONS` there and rerun step 2. The site
-  needs no change. Its detection text and the meanings of its statuses are Markdown.
+  needs no change. Its detection text and the meanings of its statuses are Markdown. Long text can go in a Markdown
+  file next to the module, read with `markdown(__file__)`, like `pull_request_target.md`.
 - **Another kind of published thing:** a new step before step 6 that writes its own file with a `repo` and a
   `reason`; read it in step 6; add a table like the package and image tables.
