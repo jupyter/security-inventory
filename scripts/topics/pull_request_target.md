@@ -1,7 +1,13 @@
-A workflow that runs on `pull_request_target` gets the repository's secrets and a token that can write to it, even for a pull request that anyone opened from a fork. That is safe as long as the workflow never runs the pull request's code. If it checks out that code and then builds, tests or installs it, anyone can open a pull request that steals the secrets or pushes to the repository. This is known as a "pwn request", and it has caused real supply-chain attacks.
+A workflow that runs on `pull_request_target` gets the repository's secrets and a token that can write to it, even for a pull request that anyone opened from a fork. That is safe as long as the workflow never runs the pull request's code. If it checks out that code and then builds, tests or installs it, anyone can open a pull request that steals the secrets or pushes to the repository.
 
-GitHub now adds a default policy that blocks the event in public repositories without an Actions event policy of their own. For now it only records the runs it would block. GitHub plans to start blocking them on December 2, 2026, unless an organization or repository policy says otherwise.
+GitHub will by default start blocking workflow runs triggered by the `pull_request_target` event starting December 2, 2026 (though we may extend that deadline with an org-wide policy).
 
 Most workflows can move to the `pull_request` event, which runs without secrets for pull requests from forks. Some need `pull_request_target`, like ones that label pull requests or post checks on them: keep those only if they never run the pull request's code, and allow the event in a policy. Read more in [GitHub's guide to `pull_request_target`](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target), and see which runs the policy would block with [policy insights](https://docs.github.com/en/actions/how-tos/administer/control-workflow-execution).
 
-We look for the event in the `on` key of each workflow in `.github/workflows`.
+To detect workflows using `pull_request_target`, we look for `pull_request_target` in the `on` key of each workflow in `.github/workflows`:
+
+```yaml
+on:
+  pull_request_target:
+    ...
+```
