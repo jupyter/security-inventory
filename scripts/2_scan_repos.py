@@ -71,6 +71,8 @@ MENTIONS = {
     "zizmor-action": r"zizmor-action",
     "pre-commit": r"(?<![\w./-])pre-commit(?=\s|/action)|\bprek\b(?!\.toml)|^ci:",
 }
+# A comment that tells zizmor a workflow's dangerous trigger, like pull_request_target, was reviewed and is safe.
+ZIZMOR_REVIEWED = r"#.*zizmor:\s*ignore\[[^\]]*\bdangerous-triggers\b"
 # Where GitHub looks for a security policy, in its order. Names are matched in lowercase.
 SECURITY_POLICIES = (".github/security.md", "security.md", "docs/security.md")
 EMAIL = r"[A-Za-z0-9][\w.+-]*@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+"
@@ -237,13 +239,19 @@ def triggers(workflow: str) -> set[str]:
     return {on} if isinstance(on, str) else {str(event) for event in on or []}
 
 
-def summarize_workflows(workflows: list[str]) -> dict:
-    text = "\n".join(workflows)
+def summarize_workflows(workflows: dict[str, str]) -> dict:
+    """`pull_request_target` maps each workflow that runs on it to whether a zizmor comment marks it as reviewed."""
+    text = "\n".join(workflows.values())
     return {
         "count": len(workflows),
-        "triggers": sorted(set().union(*map(triggers, workflows))),
+        "triggers": sorted(set().union(*map(triggers, workflows.values()))),
         "secrets": sorted(set(re.findall(SECRET, text)) - {"GITHUB_TOKEN"}),  # every repo has GITHUB_TOKEN
         "publishes": [kind for kind, pattern in PUBLISHES.items() if re.search(pattern, text, re.I)],
+        "pull_request_target": {
+            path: bool(re.search(ZIZMOR_REVIEWED, workflow))
+            for path, workflow in workflows.items()
+            if "pull_request_target" in triggers(workflow)
+        },
     }
 
 
@@ -284,7 +292,7 @@ def scan(full_name: str, clone_dir: Path) -> dict:
         "n_files": len(paths),
         "file_types": dict(Counter(file_type(path) for path in paths)),
         "packages": packages,
-        "workflows": summarize_workflows([read(path) for path in workflows]),
+        "workflows": summarize_workflows({path: read(path) for path in workflows}),
         "uses": sorted({f"{repo}@{ref}" for repo, ref in re.findall(USES, ci_text)}),
         "images": sorted({image for path in chartpress for image in chartpress_images(read(path))}),
         "build_requires": sorted(build_requirements),

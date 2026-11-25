@@ -11,9 +11,17 @@ def check(repo: dict, scan: dict) -> Result:
     workflows = scan[repo["full_name"]]["workflows"]
     if not workflows["count"]:
         return Result(NOT_APPLICABLE, "No GitHub workflows.")
-    if "pull_request_target" in workflows["triggers"]:
-        return Result(MISSING, "A workflow runs on pull_request_target.")
-    return Result(DONE, "No workflow runs on pull_request_target.")
+    reviewed = workflows["pull_request_target"]  # workflow -> whether a zizmor comment marks it as reviewed
+    if not reviewed:
+        return Result(DONE, "No workflow runs on pull_request_target.")
+    files = sorted(reviewed)
+    if all(reviewed.values()):
+        return Result(PARTIAL, "Marked as reviewed: it needs a policy that allows pull_request_target.", evidence=files)
+    unmarked = sum(not ok for ok in reviewed.values())
+    workflow = "workflow runs" if unmarked == 1 else "workflows run"
+    return Result(
+        MISSING, f"{unmarked} {workflow} on pull_request_target without being marked as reviewed.", evidence=files
+    )
 
 
 TOPIC = Topic(
@@ -23,8 +31,11 @@ TOPIC = Topic(
     detection=markdown(__file__),
     meanings={
         DONE: "None of its workflows runs on `pull_request_target`.",
-        PARTIAL: "Not used: a workflow runs on the event or not.",
-        MISSING: "At least one of its workflows runs on `pull_request_target`.",
+        PARTIAL: (
+            "Its workflows that run on `pull_request_target` are all marked as reviewed with a zizmor comment. It needs"
+            " an event policy that allows the event."
+        ),
+        MISSING: "At least one of its workflows runs on `pull_request_target` and is not marked as reviewed.",
         NOT_APPLICABLE: "The repository has no GitHub workflows.",
     },
     check=check,
