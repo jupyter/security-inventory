@@ -11,7 +11,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -34,7 +35,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -56,7 +58,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -79,7 +82,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -103,7 +107,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -128,7 +133,10 @@
         "pull_request_target"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {
+        ".github/workflows/binder-badge.yml": false
+      }
     },
     "uses": [
       "manics/action-binderbadge@main"
@@ -152,7 +160,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -175,7 +184,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -198,7 +208,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -221,7 +232,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -245,7 +257,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -268,7 +281,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -289,7 +303,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -312,7 +327,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -334,7 +350,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -357,7 +374,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -381,7 +399,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -402,7 +421,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -423,7 +443,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -446,7 +467,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -470,7 +492,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -492,7 +515,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -513,7 +537,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -537,7 +562,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -560,7 +586,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -583,7 +610,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -607,7 +635,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -630,7 +659,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -652,7 +682,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -674,7 +705,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -700,7 +732,10 @@
         "pull_request_target"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {
+        ".github/workflows/binder-badge.yml": false
+      }
     },
     "uses": [
       "manics/action-binderbadge@main"
@@ -725,7 +760,10 @@
         "pull_request_target"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {
+        ".github/workflows/binder-badge.yml": false
+      }
     },
     "uses": [
       "manics/action-binderbadge@main"
@@ -751,7 +789,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -773,7 +812,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -798,7 +838,10 @@
         "pull_request_target"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {
+        ".github/workflows/binder-badge.yml": false
+      }
     },
     "uses": [
       "manics/action-binderbadge@main"
@@ -823,7 +866,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -847,7 +891,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -869,7 +914,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -890,7 +936,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -911,7 +958,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -935,7 +983,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -958,7 +1007,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -982,7 +1032,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -1022,7 +1073,8 @@
         "container",
         "website",
         "cloud"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -1068,7 +1120,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -1089,7 +1142,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -1120,7 +1174,8 @@
       ],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v5"
@@ -1143,7 +1198,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -1163,7 +1219,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -1184,7 +1241,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -1205,7 +1263,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -1250,7 +1309,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v5",
@@ -1304,7 +1364,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -1356,7 +1417,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -1396,7 +1458,8 @@
       "publishes": [
         "pypi",
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v6.1.0",
@@ -1466,7 +1529,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
@@ -1509,7 +1573,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -1545,7 +1610,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v4",
@@ -1577,7 +1643,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -1616,7 +1683,8 @@
       ],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -1657,7 +1725,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -1701,7 +1770,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -1746,7 +1816,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -1798,7 +1869,10 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/preview-link.yml": true
+      }
     },
     "uses": [
       "actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
@@ -1842,7 +1916,8 @@
       "secrets": [
         "GH_APP_PRIVATE_KEY"
       ],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "jupyter/pr-triage-board-bot@main"
@@ -1874,7 +1949,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -1909,7 +1985,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -1944,7 +2021,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -1977,7 +2055,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -2019,7 +2098,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -2061,7 +2141,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -2097,7 +2178,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -2124,7 +2206,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -2152,7 +2235,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -2186,7 +2270,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -2220,7 +2305,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -2256,7 +2342,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -2279,7 +2366,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -2319,7 +2407,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -2348,7 +2437,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -2358,7 +2448,7 @@
     "security_policy": null
   },
   "jupyter-book/jupyter-book": {
-    "head": "e207d135398d408e3ce54f4ab70744cfeff7065b",
+    "head": "f3375e5258238b1bf8b4c4e5803e0a6001ace0b1",
     "n_files": 80,
     "file_types": {
       "config": 17,
@@ -2397,7 +2487,8 @@
         "npm",
         "jupyter_releaser",
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -2459,7 +2550,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -2503,7 +2595,8 @@
       ],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -2557,7 +2650,10 @@
         "npm",
         "jupyter_releaser",
         "website"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/cache@v4",
@@ -2597,7 +2693,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -2625,7 +2722,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -2666,7 +2764,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -2735,7 +2834,8 @@
       ],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -2875,7 +2975,8 @@
       "publishes": [
         "jupyter_releaser",
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -2894,7 +2995,7 @@
     "security_policy": null
   },
   "jupyter-book/mystmd": {
-    "head": "30f0ea332f009aef1547c94a53b5aa46120a9809",
+    "head": "c415507b3b2c197a56b482a75b2a7ec18e6fd72c",
     "n_files": 1803,
     "file_types": {
       "docs": 474,
@@ -3144,7 +3245,10 @@
       "publishes": [
         "pypi",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/enforce-label.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v4",
@@ -3183,7 +3287,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -3216,7 +3321,8 @@
         "VERCEL_PROJECT_ID",
         "VERCEL_TOKEN"
       ],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -3240,7 +3346,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -3271,7 +3378,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -3291,7 +3399,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -3358,7 +3467,8 @@
       "publishes": [
         "npm",
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "JamesIves/github-pages-deploy-action@v4",
@@ -3389,7 +3499,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -3420,7 +3531,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -3447,7 +3559,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "FreekPols/JB-workflows@main"
@@ -3470,7 +3583,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -3496,7 +3610,8 @@
         "issues"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -3525,7 +3640,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -3558,7 +3674,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -3610,7 +3727,8 @@
       "publishes": [
         "pypi",
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -3650,7 +3768,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -3675,7 +3794,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -3712,7 +3832,8 @@
         "schedule"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -3753,7 +3874,8 @@
         "schedule"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -3804,7 +3926,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -3861,7 +3984,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -3926,7 +4050,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -3988,7 +4113,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v3",
@@ -4047,7 +4173,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -4116,7 +4243,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -4173,7 +4301,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -4222,7 +4351,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v2",
@@ -4271,7 +4401,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -4332,7 +4463,12 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/auto_author_assign.yml": false,
+        ".github/workflows/enforce-label.yml": false,
+        ".github/workflows/license-header.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v7",
@@ -4652,7 +4788,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -4702,7 +4839,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -4754,7 +4892,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -4792,7 +4931,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -4839,7 +4979,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -4876,7 +5017,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -4897,7 +5039,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -4947,7 +5090,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -5016,7 +5160,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -5118,7 +5263,10 @@
         "schedule"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/cache@v6",
@@ -5185,7 +5333,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -5234,7 +5383,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -5275,7 +5425,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v1",
@@ -5306,7 +5457,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -5339,7 +5491,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -5373,7 +5526,10 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-badge.yml": false
+      }
     },
     "uses": [
       "JamesIves/github-pages-deploy-action@4.1.3",
@@ -5407,7 +5563,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "JamesIves/github-pages-deploy-action@4.1.3",
@@ -5439,7 +5596,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -5475,7 +5633,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -5503,7 +5662,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -5534,7 +5694,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -5577,7 +5738,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -5605,7 +5767,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "SimenB/github-actions-cpu-cores@v1",
@@ -5632,7 +5795,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -5661,7 +5825,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "SimenB/github-actions-cpu-cores@v2",
@@ -5692,7 +5857,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -5712,7 +5878,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -5738,7 +5905,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -5769,7 +5937,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "SimenB/github-actions-cpu-cores@v2",
@@ -5806,7 +5975,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v4",
@@ -5841,7 +6011,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "SimenB/github-actions-cpu-cores@v2",
@@ -5874,7 +6045,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -5907,7 +6079,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -5942,7 +6115,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v5",
@@ -5983,7 +6157,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v5",
@@ -6026,7 +6201,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -6071,7 +6247,8 @@
       "publishes": [
         "pypi",
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -6118,7 +6295,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -6154,7 +6332,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "SimenB/github-actions-cpu-cores@v2",
@@ -6190,7 +6369,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "SimenB/github-actions-cpu-cores@v2",
@@ -6225,7 +6405,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -6261,7 +6442,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -6291,7 +6473,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "SimenB/github-actions-cpu-cores@v2",
@@ -6325,7 +6508,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "SimenB/github-actions-cpu-cores@v2",
@@ -6356,7 +6540,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -6386,7 +6571,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "SimenB/github-actions-cpu-cores@v2",
@@ -6422,7 +6608,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "SimenB/github-actions-cpu-cores@v2",
@@ -6455,7 +6642,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -6494,7 +6682,10 @@
       ],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/docs-preview.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v2",
@@ -6534,7 +6725,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -6556,7 +6748,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -6589,7 +6782,10 @@
       ],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/pr-rtd-link.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v4",
@@ -6627,7 +6823,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -6657,7 +6854,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -6680,7 +6878,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -6701,7 +6900,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -6742,7 +6942,8 @@
       ],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -6791,7 +6992,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -6830,7 +7032,8 @@
       "secrets": [],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -6869,7 +7072,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -6899,7 +7103,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -6931,7 +7136,8 @@
       ],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -6978,7 +7184,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v4",
@@ -7005,7 +7212,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -7044,7 +7252,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -7071,7 +7280,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -7107,7 +7317,8 @@
       "secrets": [],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -7160,7 +7371,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -7200,7 +7412,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "Cyb3r-Jak3/html5validator-action@v7.1.1",
@@ -7251,7 +7464,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -7300,7 +7514,8 @@
       "secrets": [],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -7350,7 +7565,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v5",
@@ -7406,7 +7622,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -7457,7 +7674,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -7493,7 +7711,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -7516,7 +7735,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -7540,7 +7760,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -7565,7 +7786,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -7590,7 +7812,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -7611,7 +7834,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -7655,7 +7879,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7",
@@ -7719,7 +7944,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5",
@@ -7782,7 +8008,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -7819,7 +8046,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -7878,7 +8106,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-badge.yml": false
+      }
     },
     "uses": [
       "actions/cache@v5",
@@ -7942,7 +8173,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -8019,7 +8251,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder.yaml": false
+      }
     },
     "uses": [
       "actions/checkout@v4",
@@ -8062,7 +8297,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -8109,7 +8345,8 @@
       ],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -8161,7 +8398,8 @@
       ],
       "publishes": [
         "cloud"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -8292,7 +8530,11 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/auto_author_assign.yml": false,
+        ".github/workflows/binder.yml": false
+      }
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -8360,7 +8602,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -8415,7 +8658,8 @@
       ],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -8469,7 +8713,8 @@
       "secrets": [
         "GH_APP_PRIVATE_KEY"
       ],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -8493,7 +8738,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -8514,7 +8760,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -8545,7 +8792,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -8571,7 +8819,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -8581,7 +8830,7 @@
     "security_policy": null
   },
   "jupyter/security-inventory": {
-    "head": "842015c4909cd217fe225677c573dccca2503674",
+    "head": "d66aebb9200f162bd19e9a5baa8db42bcdfd4eb7",
     "n_files": 67,
     "file_types": {
       "config": 14,
@@ -8610,7 +8859,8 @@
       "secrets": [
         "DEEPSEEK_API_KEY"
       ],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -8642,7 +8892,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -8668,7 +8919,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -8705,7 +8957,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -8736,7 +8989,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -8772,7 +9026,8 @@
       "secrets": [],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v2",
@@ -8822,7 +9077,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -8874,7 +9130,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -8918,7 +9175,10 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/rtd-preview.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v4",
@@ -8949,7 +9209,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -8978,7 +9239,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9011,7 +9273,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9046,7 +9309,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9074,7 +9338,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9104,7 +9369,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9134,7 +9400,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9162,7 +9429,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9190,7 +9458,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9221,7 +9490,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9252,7 +9522,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9283,7 +9554,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9308,7 +9580,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9329,7 +9602,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9350,7 +9624,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9371,7 +9646,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9392,7 +9668,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9420,7 +9697,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9453,7 +9731,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9478,7 +9757,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9509,7 +9789,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9540,7 +9821,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9573,7 +9855,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9597,7 +9880,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9646,7 +9930,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9680,7 +9965,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "JamesIves/github-pages-deploy-action@releases/v3",
@@ -9714,7 +10000,10 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/pr-rtd-link.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v4",
@@ -9774,7 +10063,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/cache@v4",
@@ -9813,7 +10105,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -9837,7 +10130,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9868,7 +10162,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -9902,7 +10197,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9925,7 +10221,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -9961,7 +10258,8 @@
       "secrets": [],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -10006,7 +10304,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -10045,7 +10344,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
@@ -10087,7 +10387,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -10122,7 +10423,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -10168,7 +10470,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -10222,7 +10525,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -10266,7 +10570,8 @@
       "secrets": [],
       "publishes": [
         "cloud"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -10334,7 +10639,8 @@
       ],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -10391,7 +10697,8 @@
       "secrets": [],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -10425,7 +10732,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -10454,7 +10762,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -10503,7 +10812,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -10539,7 +10849,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -10572,7 +10883,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -10615,7 +10927,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
@@ -10650,7 +10963,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -10682,7 +10996,8 @@
       ],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -10726,7 +11041,8 @@
       "secrets": [],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -10777,7 +11093,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -10808,7 +11125,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -10830,7 +11148,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -10857,7 +11176,8 @@
         "schedule"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7.0.1",
@@ -10892,7 +11212,8 @@
       "secrets": [],
       "publishes": [
         "cloud"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "Actions-R-Us/actions-tagger@v2",
@@ -10931,7 +11252,8 @@
       "secrets": [],
       "publishes": [
         "cloud"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "Actions-R-Us/actions-tagger@330ddfac760021349fef7ff62b372f2f691c20fb",
@@ -10973,7 +11295,8 @@
       "secrets": [],
       "publishes": [
         "cloud"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "Actions-R-Us/actions-tagger@v2",
@@ -11011,7 +11334,8 @@
         "release"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "Actions-R-Us/actions-tagger@330ddfac760021349fef7ff62b372f2f691c20fb",
@@ -11052,7 +11376,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -11105,7 +11430,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v5",
@@ -11140,7 +11466,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -11170,7 +11497,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -11240,7 +11568,8 @@
         "container",
         "website",
         "cloud"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -11299,7 +11628,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd",
@@ -11366,7 +11696,8 @@
       "publishes": [
         "npm",
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -11402,7 +11733,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -11449,7 +11781,8 @@
       "publishes": [
         "pypi",
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -11503,7 +11836,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -11550,7 +11884,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -11603,7 +11938,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v6",
@@ -11648,7 +11984,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -11689,7 +12026,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6"
@@ -11716,7 +12054,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -11759,7 +12098,10 @@
       "publishes": [
         "pypi",
         "container"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-badge.yaml": false
+      }
     },
     "uses": [
       "actions/cache@v6",
@@ -11812,7 +12154,8 @@
       "publishes": [
         "pypi",
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
@@ -11871,7 +12214,8 @@
       "publishes": [
         "pypi",
         "npm"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -11944,7 +12288,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -12010,7 +12355,8 @@
       ],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -12054,7 +12400,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -12084,7 +12431,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -12108,7 +12456,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -12144,7 +12493,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
@@ -12185,7 +12535,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -12221,7 +12572,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -12274,7 +12626,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -12311,7 +12664,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -12348,7 +12702,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -12390,7 +12745,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -12447,7 +12803,8 @@
       "publishes": [
         "pypi",
         "cloud"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -12498,7 +12855,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -12545,7 +12903,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8",
@@ -12583,7 +12942,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -12623,7 +12983,8 @@
       "publishes": [
         "container",
         "cloud"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -12672,7 +13033,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -12710,7 +13072,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -12762,7 +13125,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -12805,7 +13169,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -12838,7 +13203,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -12871,7 +13237,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -12904,7 +13271,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -12946,7 +13314,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
@@ -12998,7 +13367,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -13044,7 +13414,8 @@
       ],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -13091,7 +13462,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -13171,7 +13543,8 @@
       "publishes": [
         "pypi",
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -13219,7 +13592,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "Actions-R-Us/actions-tagger@release/v2",
@@ -13245,7 +13619,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -13290,7 +13665,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -13337,7 +13713,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -13385,7 +13762,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -13428,7 +13806,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "JasonEtco/create-an-issue@v2",
@@ -13475,7 +13854,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v6",
@@ -13519,7 +13899,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0",
@@ -13577,7 +13958,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -13626,7 +14008,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -13671,7 +14054,8 @@
         "container",
         "website",
         "cloud"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -13723,7 +14107,8 @@
       "secrets": [
         "GH_APP_PRIVATE_KEY"
       ],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "yuvipanda/pr-triage-board-bot@main"
@@ -13752,7 +14137,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -13851,7 +14237,8 @@
         "workflow_dispatch"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v1",
@@ -13941,7 +14328,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/license-header.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v4",
@@ -13981,7 +14371,8 @@
         "schedule"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -14015,7 +14406,8 @@
         "schedule"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v3",
@@ -14400,7 +14792,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v4",
@@ -14442,7 +14835,8 @@
       "secrets": [],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v4",
@@ -14474,7 +14868,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -14552,7 +14947,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -14610,7 +15006,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -14674,7 +15071,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830",
@@ -14772,7 +15170,8 @@
         "npm",
         "jupyter_releaser",
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v5",
@@ -14837,7 +15236,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/license-header.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v7",
@@ -14925,7 +15327,12 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/auto_author_assign.yml": false,
+        ".github/workflows/binder-badge.yml": false,
+        ".github/workflows/license-header.yml": false
+      }
     },
     "uses": [
       "actions/cache@v3",
@@ -15041,7 +15448,11 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-badge.yml": false,
+        ".github/workflows/license-header.yml": false
+      }
     },
     "uses": [
       "actions/cache@v5",
@@ -15156,7 +15567,10 @@
       "secrets": [
         "github_token"
       ],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {
+        ".github/workflows/binder.yaml": false
+      }
     },
     "uses": [
       "actions/cache@v3",
@@ -15186,7 +15600,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -15220,7 +15635,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -15230,7 +15646,7 @@
     "security_policy": null
   },
   "jupyterlab/jupyterlab": {
-    "head": "2ffda9a7b8b42d76a6858abaffe4aab9c2f1872a",
+    "head": "585894cf7b1a5a226d579bcd94c9e759df5ceb86",
     "n_files": 3142,
     "file_types": {
       "config": 605,
@@ -15955,7 +16371,12 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/auto_author_assign.yml": true,
+        ".github/workflows/enforce-label.yml": true,
+        ".github/workflows/labeler.yml": false
+      }
     },
     "uses": [
       "actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
@@ -16025,7 +16446,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v1",
@@ -16062,7 +16484,10 @@
       "secrets": [
         "github_token"
       ],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {
+        ".github/workflows/binder_on_pr.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v3",
@@ -16115,7 +16540,8 @@
       ],
       "publishes": [
         "container"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5",
@@ -16213,7 +16639,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/cache@v3",
@@ -16275,7 +16704,10 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yaml": false
+      }
     },
     "uses": [
       "actions/checkout@v3",
@@ -16332,7 +16764,10 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/cache@v2",
@@ -16388,7 +16823,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v4",
@@ -16426,7 +16864,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -16464,7 +16903,8 @@
       "secrets": [],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -16524,7 +16964,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/cache@v4",
@@ -16590,7 +17033,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v3",
@@ -16657,7 +17103,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/fix-license-header.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v4",
@@ -16695,7 +17144,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -16916,7 +17366,8 @@
       ],
       "publishes": [
         "pypi"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -16935,11 +17386,11 @@
     "security_policy": null
   },
   "jupyterlab/lumino": {
-    "head": "648528ed6be226ddcd76da7ed4cc8fa9aa13bf8f",
-    "n_files": 466,
+    "head": "9abb236f76d1b0ef7993d8d3cdecc58cea5c2600",
+    "n_files": 470,
     "file_types": {
       "other": 13,
-      "code": 251,
+      "code": 255,
       "config": 121,
       "docs": 32,
       "web": 43,
@@ -17073,7 +17524,12 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/auto-author-assign.yml": false,
+        ".github/workflows/enforce-label.yml": false,
+        ".github/workflows/license-header.yml": false
+      }
     },
     "uses": [
       "actions/cache@v6",
@@ -17124,7 +17580,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306",
@@ -17204,7 +17661,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/preview-badges-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/cache@v4",
@@ -17258,7 +17718,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v2",
@@ -17307,7 +17768,8 @@
       ],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -17360,7 +17822,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -17403,7 +17866,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -17437,7 +17901,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -17458,7 +17923,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -17509,7 +17975,11 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false,
+        ".github/workflows/enforce-label.yml": false
+      }
     },
     "uses": [
       "actions/cache@v4",
@@ -17545,7 +18015,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -17572,7 +18043,8 @@
         "schedule"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -17596,7 +18068,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -17645,7 +18118,8 @@
         "npm",
         "jupyter_releaser",
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v7",
@@ -17686,7 +18160,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -17739,7 +18214,8 @@
         "npm",
         "jupyter_releaser",
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -17809,7 +18285,8 @@
         "npm",
         "jupyter_releaser",
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -17867,7 +18344,10 @@
       "secrets": [],
       "publishes": [
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/cache@v3",
@@ -17891,7 +18371,7 @@
     "security_policy": null
   },
   "jupyterlite/jupyterlite": {
-    "head": "e5304bcd11dd9b0085a392bf08836df766547cf2",
+    "head": "bc0c6fe5afe30dbfc5ae9ee13f5e0e91175b4db6",
     "n_files": 509,
     "file_types": {
       "config": 94,
@@ -18035,7 +18515,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/rtd-preview.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v7",
@@ -18096,7 +18579,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/cache@v3",
@@ -18148,7 +18632,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -18211,7 +18696,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/cache@v5",
@@ -18281,7 +18769,10 @@
         "npm",
         "jupyter_releaser",
         "website"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/rtd-preview.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v4",
@@ -18382,7 +18873,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/rtd-preview.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v7",
@@ -18432,7 +18926,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -18468,7 +18963,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8",
@@ -18527,7 +19023,10 @@
         "npm",
         "jupyter_releaser",
         "website"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/rtd-preview.yml": false
+      }
     },
     "uses": [
       "actions/cache@v6",
@@ -18569,7 +19068,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -18637,7 +19137,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -18680,7 +19181,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -18707,7 +19209,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -18738,7 +19241,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -18778,7 +19282,8 @@
         "push"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v2",
@@ -18840,7 +19345,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/rtd-preview.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v4",
@@ -18882,7 +19390,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
@@ -18918,7 +19427,8 @@
       "secrets": [],
       "publishes": [
         "website"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -19008,7 +19518,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v2",
@@ -19054,7 +19567,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19080,7 +19594,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19133,7 +19648,10 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {
+        ".github/workflows/binder-on-pr.yml": false
+      }
     },
     "uses": [
       "actions/checkout@v1",
@@ -19176,7 +19694,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19205,7 +19724,8 @@
         "HF_TOKEN",
         "HF_USER"
       ],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3"
@@ -19240,7 +19760,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19262,7 +19783,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19286,7 +19808,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19333,7 +19856,8 @@
       "publishes": [
         "npm",
         "jupyter_releaser"
-      ]
+      ],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v3",
@@ -19381,7 +19905,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19405,7 +19930,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19430,7 +19956,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19453,7 +19980,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19476,7 +20004,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19500,7 +20029,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19524,7 +20054,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
@@ -19552,7 +20083,8 @@
         "schedule"
       ],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v1",
@@ -19579,7 +20111,8 @@
       "count": 0,
       "triggers": [],
       "secrets": [],
-      "publishes": []
+      "publishes": [],
+      "pull_request_target": {}
     },
     "uses": [],
     "images": [],
