@@ -1429,7 +1429,7 @@
     "security_policy": null
   },
   "ipython/ipython": {
-    "head": "5b5bc2e01adfa9972a4f542b603eab509f04be71",
+    "head": "3804fa83aff26219cea20920ac9082bc98b9a9be",
     "n_files": 511,
     "file_types": {
       "other": 18,
@@ -1631,12 +1631,12 @@
     "security_policy": null
   },
   "ipython/matplotlib-inline": {
-    "head": "28f8f3a1b4654b85a45a12626eb99a18e03bb162",
-    "n_files": 16,
+    "head": "072bcb1d0028a324fb43717c05f7fbd05ed5df2a",
+    "n_files": 17,
     "file_types": {
       "config": 6,
       "other": 3,
-      "docs": 1,
+      "docs": 2,
       "code": 4,
       "notebook": 2
     },
@@ -2358,7 +2358,7 @@
     "security_policy": null
   },
   "jupyter-book/jupyter-book": {
-    "head": "6674da6eccd792e7ab815018c69aaa5f757b0c82",
+    "head": "e207d135398d408e3ce54f4ab70744cfeff7065b",
     "n_files": 80,
     "file_types": {
       "config": 17,
@@ -2894,13 +2894,13 @@
     "security_policy": null
   },
   "jupyter-book/mystmd": {
-    "head": "29234cccc35d06210e78da28d92c7364328bbf70",
-    "n_files": 1802,
+    "head": "30f0ea332f009aef1547c94a53b5aa46120a9809",
+    "n_files": 1803,
     "file_types": {
-      "docs": 477,
+      "docs": 474,
       "config": 451,
       "other": 77,
-      "code": 691,
+      "code": 695,
       "web": 8,
       "media": 95,
       "notebook": 3
@@ -3638,7 +3638,7 @@
     }
   },
   "jupyter-server/.github": {
-    "head": "acfd885014be76a95f8543334c3306de35544ca1",
+    "head": "23c98846f685b1ab6dee63fd9ecec03c410646a9",
     "n_files": 10,
     "file_types": {
       "docs": 5,
@@ -3660,7 +3660,7 @@
     "security_policy": {
       "path": "SECURITY.md",
       "emails": [
-        "security@ipython.org"
+        "security@jupyter.org"
       ]
     }
   },
@@ -4293,7 +4293,7 @@
     "security_policy": null
   },
   "jupyter-server/jupyter_ydoc": {
-    "head": "2a322b8c63230bd30cc371c7aae9c2ee268a69a7",
+    "head": "5886decd687efd0a9005df3c3805476e1a36c7cf",
     "n_files": 76,
     "file_types": {
       "config": 22,
@@ -4360,7 +4360,7 @@
     "security_policy": null
   },
   "jupyter-server/jupyverse": {
-    "head": "e40e44aae6551cf736db5839395af34ad379845a",
+    "head": "4d8ee287025a0fff3458f6df8fb89f93bbfa7fc6",
     "n_files": 401,
     "file_types": {
       "config": 53,
@@ -5855,7 +5855,7 @@
     "security_policy": null
   },
   "jupyter-xeus/xeus-lua": {
-    "head": "cb6949f60a89383d8c7e488d1f69754ff90e8d2f",
+    "head": "07e736d5f8c53b9484650ece380ff0bab3bc3941",
     "n_files": 70,
     "file_types": {
       "docs": 8,
@@ -5962,7 +5962,7 @@
     "security_policy": null
   },
   "jupyter-xeus/xeus-python": {
-    "head": "8bb112643c9d643869c803efafe89a6128ac7f32",
+    "head": "b521c689d0f6ba2b1835e0fcad8925cb8e13d6c3",
     "n_files": 101,
     "file_types": {
       "config": 14,
@@ -7127,7 +7127,7 @@
     "security_policy": null
   },
   "jupyter/jupyter-sphinx": {
-    "head": "68efe44ddd79249e7fec078e26b39fba89534455",
+    "head": "90d53486569b0252d8f5b28c4a85a79a202b21a2",
     "n_files": 72,
     "file_types": {
       "config": 8,
@@ -7179,7 +7179,7 @@
     "security_policy": null
   },
   "jupyter/jupyter.github.io": {
-    "head": "149ed77fd3adfa3f289f72f0551ff1e27b547bf6",
+    "head": "bb042539b05cc3477412a41b3f49840e6f3e1e35",
     "n_files": 331,
     "file_types": {
       "media": 240,
@@ -8181,7 +8181,7 @@
     "security_policy": null
   },
   "jupyter/notebook": {
-    "head": "b373833c18fb062d304e1aa05d40b1f2141a6eee",
+    "head": "5bc2024fa0453ef28039749e8ea036e0dcbb734f",
     "n_files": 379,
     "file_types": {
       "config": 87,
@@ -8581,12 +8581,12 @@
     "security_policy": null
   },
   "jupyter/security-inventory": {
-    "head": "e9e5aa835c7c6a32fb6560a1a6deedf85da647b1",
-    "n_files": 66,
+    "head": "842015c4909cd217fe225677c573dccca2503674",
+    "n_files": 67,
     "file_types": {
       "config": 14,
       "other": 2,
-      "docs": 13,
+      "docs": 14,
       "web": 2,
       "code": 34,
       "data": 1
@@ -8889,16 +8889,16 @@
     "security_policy": null
   },
   "jupyter/try-jupyter": {
-    "head": "84bab66332fb9262ed6a17013497be3eaa60e2be",
-    "n_files": 37,
+    "head": "60464adcaabe28665fd085b27195251c5fb9d572",
+    "n_files": 40,
     "file_types": {
       "other": 4,
-      "config": 15,
+      "config": 17,
       "docs": 1,
       "data": 2,
       "media": 2,
       "notebook": 8,
-      "code": 5
+      "code": 6
     },
     "packages": [
       {
@@ -8932,7 +8932,7 @@
     "images": [],
     "build_requires": [],
     "mentions": {},
-    "readme": "# Try Jupyter, powered by JupyterLite\n\n[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyter.org/try-jupyter)\n\nA tour of Jupyter and IPython, powered by JupyterLite.\n\n## ✨ Try it in your browser ✨\n\n➡️ **https://jupyter.org/try-jupyter**\n\nClicking the link above should load a JupyterLab environment running in your browser. Open the Introductory notebook at `notebooks/Intro.ipynb` to get started.\n\n## About this repository\n\nThis is a demonstration repository meant for use at `try.jupyter.org`. It uses the [JupyterLite project](https://jupyterlite.readthedocs.io/en/latest/) to embed a self-contained Jupyter environment in the browser, along with many popular packages in scientific computing.\n\nIt uses GitHub pages to serve the JupyterLite bundle, and is accessible at https://jupyter.org/try-jupyter.\n\n### How to edit these notebooks\n\nThe notebooks in this repository are written with [JupyterLite kernels](https://jupyterlite.readthedocs.io/en/latest/kernels/index.html), so if you edit them locally, you will likely over-write the kernel information with your local kernels.\nAs such, the easiest way to make edits to them is to do so [**via the Try Jupyter Page**](https://jupyter.org/try-jupyter).\nMake the edits you wish at that URL, then download the notebook and replace the one in a repository locally.\n",
+    "readme": "# Try Jupyter, powered by JupyterLite\n\n[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyter.org/try-jupyter)\n\nA tour of Jupyter and IPython, powered by JupyterLite.\n\n## ✨ Try it in your browser ✨\n\n➡️ **https://jupyter.org/try-jupyter**\n\nClicking the link above should load a JupyterLab environment running in your browser. Open the Introductory notebook at `notebooks/Intro.ipynb` to get started.\n\n## About this repository\n\nThis is a demonstration repository meant for use at `try.jupyter.org`. It uses the [JupyterLite project](https://jupyterlite.readthedocs.io/en/latest/) to embed a self-contained Jupyter environment in the browser, along with many popular packages in scientific computing.\n\nIt uses GitHub pages to serve the JupyterLite bundle, and is accessible at https://jupyter.org/try-jupyter.\n\n### How to edit these notebooks\n\nThe notebooks in this repository are written with [JupyterLite kernels](https://jupyterlite.readthedocs.io/en/latest/kernels/index.html), so if you edit them locally, you will likely over-write the kernel information with your local kernels.\nAs such, the easiest way to make edits to them is to do so [**via the Try Jupyter Page**](https://jupyter.org/try-jupyter).\nMake the edits you wish at that URL, then download the notebook and replace the one in a repository locally.\n\n### Report a Problem dialog\n\nThe `feedback` folder holds a prebuilt JupyterLab extension, written by hand in `feedback/static/remoteEntry.js` so that it needs no build.\nIt adds **Help > Report a Problem…**, which asks what the problem is about and opens a pre-filled issue in the repository that matches the answer.\n",
     "security_policy": null
   },
   "jupyter/try.jupyter.org": {
@@ -11189,7 +11189,7 @@
     "security_policy": null
   },
   "jupyterhub/binderhub": {
-    "head": "8f416b1c01e5945eb6e247d43ae4852e928100a1",
+    "head": "3af0d6a8dcbbb3bcbf19a3e8824a69d3f8b60deb",
     "n_files": 232,
     "file_types": {
       "other": 20,
@@ -11243,7 +11243,6 @@
       ]
     },
     "uses": [
-      "actions/cache@v5",
       "actions/checkout@v7",
       "actions/setup-node@v7",
       "actions/setup-python@v7",
@@ -12196,7 +12195,7 @@
     "security_policy": null
   },
   "jupyterhub/jupyterhub-python-repo-template": {
-    "head": "3bcbc805517686a33b8dfc5bff6e1e15f8afb2b7",
+    "head": "5b85be121e621968239cf688d3d4e5c32d9e9ec1",
     "n_files": 25,
     "file_types": {
       "other": 5,
@@ -12242,7 +12241,7 @@
     "security_policy": {
       "path": "SECURITY.md",
       "emails": [
-        "security@ipython.org"
+        "security@jupyter.org"
       ]
     }
   },
@@ -12594,7 +12593,7 @@
     "security_policy": null
   },
   "jupyterhub/mybinder.org-deploy": {
-    "head": "051f7103145b995005ab10f149106bff3e4dbf43",
+    "head": "78e39bb5433174f7f64867093df009499bb42d21",
     "n_files": 315,
     "file_types": {
       "other": 42,
@@ -12918,7 +12917,7 @@
     "security_policy": null
   },
   "jupyterhub/oauthenticator": {
-    "head": "ca8c70c21e1a24e89a9bc3f26f39010206c4d7f8",
+    "head": "7569d8b0a5f0b66de626a5aa7d5b9c3bb53a1124",
     "n_files": 97,
     "file_types": {
       "other": 9,
@@ -13640,7 +13639,7 @@
     "security_policy": null
   },
   "jupyterhub/zero-to-jupyterhub-k8s": {
-    "head": "3cd0e13b309f5c6f54668261567ce04a2c359e5c",
+    "head": "0604f9930b8156eaff282d037d6c4f86eea6d8ec",
     "n_files": 211,
     "file_types": {
       "other": 24,
@@ -14460,7 +14459,7 @@
     "security_policy": null
   },
   "jupyterlab/frontends-team-compass": {
-    "head": "10350484a13574e18e98d6f8a8a8e0e793ca4277",
+    "head": "49628ed0e6c203ccdcd79bc7ad7750a19581f391",
     "n_files": 21,
     "file_types": {
       "other": 3,
@@ -14630,7 +14629,7 @@
     "security_policy": null
   },
   "jupyterlab/jupyter-ai": {
-    "head": "3739489155e5afb86b6fbfc539c571d948edf636",
+    "head": "3c952fdd8773b97fdcf0abbed49aab6fc0b982dc",
     "n_files": 209,
     "file_types": {
       "other": 21,
@@ -14704,7 +14703,7 @@
     "security_policy": null
   },
   "jupyterlab/jupyter-ai-lite": {
-    "head": "4aabc11cf97572f219317e96ae9c3cd71c6c68a1",
+    "head": "b974f035ad61c27daf2b2cafc29ebe0e126bdfe8",
     "n_files": 158,
     "file_types": {
       "config": 35,
@@ -15231,13 +15230,13 @@
     "security_policy": null
   },
   "jupyterlab/jupyterlab": {
-    "head": "8f54fc644a1bf840c4c0b9a66a1ecbab48abd53c",
-    "n_files": 3141,
+    "head": "2ffda9a7b8b42d76a6858abaffe4aab9c2f1872a",
+    "n_files": 3142,
     "file_types": {
       "config": 605,
       "other": 24,
       "docs": 186,
-      "code": 1414,
+      "code": 1415,
       "web": 259,
       "media": 618,
       "notebook": 35
@@ -16706,7 +16705,7 @@
     "security_policy": null
   },
   "jupyterlab/language-packs": {
-    "head": "e3a0e3d193b2093379889eca2085bdfa1821ad4d",
+    "head": "99c095572bce88d030ca17e8e4a21f5c94b12794",
     "n_files": 832,
     "file_types": {
       "docs": 101,
@@ -17612,15 +17611,15 @@
     }
   },
   "jupyterlite/cockle": {
-    "head": "f76fc49ddf94ddfbfe2a6f584139e56477b6110d",
-    "n_files": 258,
+    "head": "114b3f41cd8d7eccd25bb69fde06a696dec5196b",
+    "n_files": 270,
     "file_types": {
       "config": 23,
       "other": 5,
-      "docs": 5,
+      "docs": 6,
       "media": 2,
       "web": 4,
-      "code": 219
+      "code": 230
     },
     "packages": [
       {
@@ -17892,7 +17891,7 @@
     "security_policy": null
   },
   "jupyterlite/jupyterlite": {
-    "head": "e0654f2ecbc4b1c0d2435f8a6d2c0c9aa50de5c6",
+    "head": "e5304bcd11dd9b0085a392bf08836df766547cf2",
     "n_files": 509,
     "file_types": {
       "config": 94,
