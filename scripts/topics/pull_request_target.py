@@ -24,7 +24,7 @@ TOPIC = Topic(
     title="pull_request_target",
     question="Do the repository's GitHub workflows avoid the pull_request_target event?",
     detection=(
-        "We read the events in the \"on\" key of each workflow in .github/workflows. A pull_request_target workflow"
+        'We read the events in the "on" key of each workflow in .github/workflows. A pull_request_target workflow'
         " runs with the repository's secrets and a write token, even for pull requests from forks. GitHub now turns"
         " the event off by default; see"
         " https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target."
