@@ -6,8 +6,6 @@ html_theme.sidebar_secondary.remove: true
 
 {{ downloads_note }}
 
-{download}`Download Full CSV </_generated/downloads/all-npm.csv>`
-
 ```{csv-table}
 :file: /_generated/all-npm.csv
 :header-rows: 1
