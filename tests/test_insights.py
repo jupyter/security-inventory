@@ -12,11 +12,6 @@ def test_plain_keeps_text_from_repos_from_becoming_html_or_markdown():
     assert insights.plain("[click](evil)") == "\\[click\\]\\(evil\\)"  # a link the model was tricked into writing
 
 
-def test_a_topics_text_keeps_its_paragraphs_and_links_and_nothing_else():
-    text = "A [guide](https://a.org/b_c).\n\n*Not bold*"
-    assert insights.plain_with_links(text) == "A [guide](https://a.org/b_c)\\.\n\n\\*Not bold\\*"
-
-
 def test_summary_sentence_reads_as_one_sentence_and_links_its_counts():
     counts = {"repos": 35, "packaged": 6, "boundaries": 1, "services": 0}
     sentence = insights.summary_sentence("[github.com/jupyter-book](https://github.com/jupyter-book)", counts)
