@@ -6,6 +6,7 @@ A topic is a module here with a TOPIC. All detection lives in these modules; the
 import re
 from collections.abc import Callable
 from dataclasses import dataclass, field
+from pathlib import Path
 
 DONE, PARTIAL, MISSING, NOT_APPLICABLE = "done", "partial", "missing", "n/a"
 STATUSES = (DONE, PARTIAL, MISSING, NOT_APPLICABLE)
@@ -50,3 +51,8 @@ def names(packages: list[dict]) -> str:
     if len(items) > 3:
         return f"{', '.join(items[:3])} and {len(items) - 3} more"
     return f"{', '.join(items[:-1])} and {items[-1]}" if len(items) > 1 else items[0]
+
+
+def markdown(module_file: str) -> str:
+    """The Markdown file next to a topic's module, for text too long to edit as a Python string."""
+    return Path(module_file).with_suffix(".md").read_text(encoding="utf-8").strip()
