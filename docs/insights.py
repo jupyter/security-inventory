@@ -591,7 +591,10 @@ def topic_summary(data: Data, names, scope: dict | None = None) -> Table:
 
 
 def topic_group_table(data: Data, topic: dict, column: str) -> Table:
-    """The repos a topic applies to, by organization or by owner. The most left to do first."""
+    """The repos by organization or by owner. The most left to do first.
+
+    A group whose repos are all n/a is finished, like a topic that applies to none of the repos.
+    """
     if column == "organization":
         group, linked, param = (lambda repo: repo["org"]), org_link, "org"
     else:
@@ -602,10 +605,9 @@ def topic_group_table(data: Data, topic: dict, column: str) -> Table:
     rows, cells = [], {}
     for key, names in groups.items():
         counts = topic_counts(data, topic, names)
-        if in_scope(counts):
-            rows.append([key, progress(counts), *count_values(counts)])
-            # tables.js filters the repository table on the text of its column, which `key` is.
-            cells[key] = [linked(key), progress_cell(counts), *count_cells(counts, "", **{param: key})]
+        rows.append([key, progress(counts), *count_values(counts)])
+        # tables.js filters the repository table on the text of its column, which `key` is.
+        cells[key] = [linked(key), progress_cell(counts), *count_cells(counts, "", **{param: key})]
     rows.sort(key=lambda row: (-(row[4] + row[5]), row[0]))
     header = [column, "progress", *COUNTS_HEADER]
     return Table(header, rows, [cells[row[0]] for row in rows])
