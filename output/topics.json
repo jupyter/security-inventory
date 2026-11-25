@@ -3040,7 +3040,7 @@
     {"topic": "pull-request-target", "repo": "jupyterlab/jupyter-renderers", "status": "missing", "reason": "1 workflow runs on pull_request_target without being marked as reviewed.", "via": [], "evidence": [".github/workflows/binder.yaml"]},
     {"topic": "pull-request-target", "repo": "jupyterlab/jupytercon-jupyterlab-training", "status": "n/a", "reason": "No GitHub workflows.", "via": [], "evidence": []},
     {"topic": "pull-request-target", "repo": "jupyterlab/jupytercon-jupyterlab-tutorial", "status": "n/a", "reason": "No GitHub workflows.", "via": [], "evidence": []},
-    {"topic": "pull-request-target", "repo": "jupyterlab/jupyterlab", "status": "missing", "reason": "1 workflow runs on pull_request_target without being marked as reviewed.", "via": [], "evidence": [".github/workflows/auto_author_assign.yml", ".github/workflows/enforce-label.yml", ".github/workflows/labeler.yml"]},
+    {"topic": "pull-request-target", "repo": "jupyterlab/jupyterlab", "status": "missing", "reason": "1 workflow runs on pull_request_target without being marked as reviewed.", "via": [], "evidence": [".github/workflows/labeler.yml"]},
     {"topic": "pull-request-target", "repo": "jupyterlab/jupyterlab-commenting", "status": "done", "reason": "No workflow runs on pull_request_target.", "via": [], "evidence": []},
     {"topic": "pull-request-target", "repo": "jupyterlab/jupyterlab-demo", "status": "missing", "reason": "1 workflow runs on pull_request_target without being marked as reviewed.", "via": [], "evidence": [".github/workflows/binder_on_pr.yml"]},
     {"topic": "pull-request-target", "repo": "jupyterlab/jupyterlab-desktop", "status": "done", "reason": "No workflow runs on pull_request_target.", "via": [], "evidence": []},

@@ -14,14 +14,13 @@ def check(repo: dict, scan: dict) -> Result:
     reviewed = workflows["pull_request_target"]  # workflow -> whether a zizmor comment marks it as reviewed
     if not reviewed:
         return Result(DONE, "No workflow runs on pull_request_target.")
-    files = sorted(reviewed)
     if all(reviewed.values()):
-        return Result(PARTIAL, "Marked as reviewed: it needs a policy that allows pull_request_target.", evidence=files)
-    unmarked = sum(not ok for ok in reviewed.values())
-    workflow = "workflow runs" if unmarked == 1 else "workflows run"
-    return Result(
-        MISSING, f"{unmarked} {workflow} on pull_request_target without being marked as reviewed.", evidence=files
-    )
+        reason = "Marked as reviewed: it needs a policy that allows pull_request_target."
+        return Result(PARTIAL, reason, evidence=sorted(reviewed))
+    unmarked = sorted(path for path, ok in reviewed.items() if not ok)
+    workflow = "workflow runs" if len(unmarked) == 1 else "workflows run"
+    reason = f"{len(unmarked)} {workflow} on pull_request_target without being marked as reviewed."
+    return Result(MISSING, reason, evidence=unmarked)
 
 
 TOPIC = Topic(
