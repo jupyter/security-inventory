@@ -603,6 +603,12 @@ def topic_group_table(data: Data, topic: dict, column: str) -> Table:
         hrefs = [repos_href("", **{param: key}, status=status) for status in (None, "done", "partial", "missing")]
         counts = [count_link(count, href) for count, href in zip([applies, *statuses], hrefs)]
         cells.append([linked(key), bars[key], *counts])
+    if column == "organization" and topic.get("org_link"):
+        title, url = topic["org_link"]
+        header.append(title)
+        for row, cell in zip(rows, cells):
+            row.append(url.format(org=row[0]))
+            cell.append(f"[{plain(title)}]({row[-1]})")
     return Table(header, rows, cells)
 
 

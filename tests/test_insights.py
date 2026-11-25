@@ -198,3 +198,15 @@ def test_the_owner_table_links_the_repos_without_an_owner_to_the_filter_on_their
     # tables.js filters on the text of the owner column of the repository table.
     assert owner == insights.owner_link(None) == "no owner"
     assert applies == '<a href="?owner=no%20owner#repositories">1</a>'
+
+
+def test_a_topic_can_link_each_organization_of_its_table_by_organization():
+    data = make_data(make_repo("o/r", []))
+    data.results = {"t": {"o/r": {"status": "missing"}}}
+    topic = {"id": "t", "org_link": ["settings", "https://github.com/organizations/{org}/settings"]}
+    table = insights.topic_group_table(data, topic, "organization")
+    assert (table.header[-1], table.cells[0][-1]) == (
+        "settings",
+        "[settings](https://github.com/organizations/o/settings)",
+    )
+    assert "settings" not in insights.topic_group_table(data, {"id": "t"}, "organization").header

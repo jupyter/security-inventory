@@ -26,4 +26,4 @@ To list the workflows in a repo that still need to be fixed, run this in the rep
 for f in .github/workflows/*.y*ml; do grep -qE '^ *(on:.*|- *)?pull_request_target' "$f" && ! grep -q 'zizmor: *ignore\[[^]]*dangerous-triggers' "$f" && echo "$f"; done
 ```
 
-To see recent workflow runs in a GitHub org that would be blocked by this change, go to https://github.com/organizations/[ORG]/settings/actions/rules/insights.
+To see recent workflow runs in a GitHub org that would be blocked by this change, follow the "policy insights" link of the org in the table by organization below. Only org owners can open it.

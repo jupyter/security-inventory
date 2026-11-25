@@ -40,4 +40,5 @@ TOPIC = Topic(
         NOT_APPLICABLE: "The repository has no GitHub workflows.",
     },
     check=check,
+    org_link=("policy insights", "https://github.com/organizations/{org}/settings/actions/rules/insights"),
 )

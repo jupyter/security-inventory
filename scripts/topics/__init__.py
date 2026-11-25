@@ -28,7 +28,10 @@ class Result:
 @dataclass
 class Topic:
     """`check` takes a repo's record of jupyter_repos.json, with the day the inventory was fetched as `fetched_on`, and
-    all of scan.json, to look at other repos like the org's .github. The id is used in URLs and file names."""
+    all of scan.json, to look at other repos like the org's .github. The id is used in URLs and file names.
+
+    `org_link`, a column title and a URL with {org}, adds a link to each organization in the topic page's table by
+    organization, like a GitHub settings page where its owners can act on the topic."""
 
     id: str
     title: str
@@ -36,6 +39,7 @@ class Topic:
     detection: str
     meanings: dict[str, str]
     check: Callable[[dict, dict], Result]
+    org_link: tuple[str, str] | None = None
 
     def __post_init__(self):
         assert re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", self.id), self.id

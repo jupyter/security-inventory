@@ -158,5 +158,7 @@ publishes it.
   fact step 2 does not keep, such as a word to find in workflows, add it to `MENTIONS` there and rerun step 2. The site
   needs no change. Its detection text and the meanings of its statuses are Markdown. Long text can go in a Markdown
   file next to the module, read with `markdown(__file__)`, like `pull_request_target.md`.
+  `org_link` adds a column to its table by organization that links to a page of each organization, like a GitHub
+  settings page.
 - **Another kind of published thing:** a new step before step 6 that writes its own file with a `repo` and a
   `reason`; read it in step 6; add a table like the package and image tables.
