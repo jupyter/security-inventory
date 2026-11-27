@@ -23,11 +23,13 @@ def test_declared_package_skips_private_packages_and_templates():
 
 
 def test_summarize_workflows_finds_triggers_secrets_and_publishing():
-    assert scan.summarize_workflows([WORKFLOW]) == {
-        "count": 1,
+    reviewed = "on:  # zizmor: ignore[dangerous-triggers] only labels\n  pull_request_target:"
+    assert scan.summarize_workflows({"a.yml": WORKFLOW, "b.yml": reviewed, "c.yml": "on: push"}) == {
+        "count": 3,
         "triggers": ["pull_request_target", "push"],
         "secrets": ["PYPI_TOKEN"],  # GITHUB_TOKEN is left out: every repo has it
         "publishes": ["pypi"],
+        "pull_request_target": {"a.yml": False, "b.yml": True},
     }
 
 

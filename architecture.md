@@ -38,7 +38,8 @@ asks (up to 5 minutes). `RETRIES` counts the retries. `Progress` shows how far a
 terminal.
 
 Step 2 keeps, for each repo: file counts by type, the packages its manifests declare, a summary of its workflows
-(triggers, secrets, what they publish), the actions it uses, the images its chartpress files build, the build
+(triggers, secrets, what they publish, and which run on pull_request_target and whether a zizmor comment marks them
+as reviewed), the actions it uses, the images its chartpress files build, the build
 requirements of its `pyproject.toml`, the start of its README, its SECURITY.md and the emails in it, and which of a few words (zizmor, pre-commit) its CI files and
 pre-commit config mention. A clone is shallow and holds only those files.
 Symbolic links are never followed.
@@ -155,6 +156,9 @@ publishes it.
 - **A column in the repo tables:** add it in `7_table.py` and in `repo_rows` of `insights.py`.
 - **A security topic:** write a module in `scripts/topics/` like `zizmor.py` and add it to `TOPICS` in step 8. If it needs a
   fact step 2 does not keep, such as a word to find in workflows, add it to `MENTIONS` there and rerun step 2. The site
-  needs no change. Its detection text and the meanings of its statuses are Markdown.
+  needs no change. Its detection text and the meanings of its statuses are Markdown. Long text can go in a Markdown
+  file next to the module, read with `markdown(__file__)`, like `pull_request_target.md`.
+  `org_link` adds a column to its table by organization that links to a page of each organization, like a GitHub
+  settings page.
 - **Another kind of published thing:** a new step before step 6 that writes its own file with a `repo` and a
   `reason`; read it in step 6; add a table like the package and image tables.

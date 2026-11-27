@@ -610,6 +610,12 @@ def topic_group_table(data: Data, topic: dict, column: str) -> Table:
         cells[key] = [linked(key), progress_cell(counts), *count_cells(counts, "", **{param: key})]
     rows.sort(key=lambda row: (-(row[4] + row[5]), row[0]))
     header = [column, "progress", *COUNTS_HEADER]
+    if column == "organization" and topic.get("org_link"):
+        title, url = topic["org_link"]
+        header.append(title)
+        for row in rows:
+            row.append(url.format(org=row[0]))
+            cells[row[0]].append(f"[{plain(title)}]({row[-1]})")
     return Table(header, rows, [cells[row[0]] for row in rows])
 
 

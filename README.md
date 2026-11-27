@@ -57,6 +57,9 @@ repository page shows how it does. The topics for now:
 - **Supported Python**: the Requires-Python of the latest release of each PyPI package leaves out the Python versions
   that no longer get security fixes.
 - **Owner**: the repository's Owner custom property is set, and not "None".
+- **pull_request_target**: no workflow runs on this event, which GitHub plans to block by default in
+  public repositories from December 2, 2026. A repository whose workflows that use it are all marked as reviewed,
+  with a `zizmor: ignore[dangerous-triggers]` comment, is partial: it needs a policy that allows the event.
 
 ## Caveats
 

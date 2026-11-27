@@ -6,6 +6,7 @@ A topic is a module here with a TOPIC. All detection lives in these modules; the
 import re
 from collections.abc import Callable
 from dataclasses import dataclass, field
+from pathlib import Path
 
 DONE, PARTIAL, MISSING, NOT_APPLICABLE = "done", "partial", "missing", "n/a"
 STATUSES = (DONE, PARTIAL, MISSING, NOT_APPLICABLE)
@@ -27,7 +28,10 @@ class Result:
 @dataclass
 class Topic:
     """`check` takes a repo's record of jupyter_repos.json, with the day the inventory was fetched as `fetched_on`, and
-    all of scan.json, to look at other repos like the org's .github. The id is used in URLs and file names."""
+    all of scan.json, to look at other repos like the org's .github. The id is used in URLs and file names.
+
+    `org_link`, a column title and a URL with {org}, adds a link to each organization in the topic page's table by
+    organization, like a GitHub settings page where its owners can act on the topic."""
 
     id: str
     title: str
@@ -35,6 +39,7 @@ class Topic:
     detection: str
     meanings: dict[str, str]
     check: Callable[[dict, dict], Result]
+    org_link: tuple[str, str] | None = None
 
     def __post_init__(self):
         assert re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", self.id), self.id
@@ -50,3 +55,8 @@ def names(packages: list[dict]) -> str:
     if len(items) > 3:
         return f"{', '.join(items[:3])} and {len(items) - 3} more"
     return f"{', '.join(items[:-1])} and {items[-1]}" if len(items) > 1 else items[0]
+
+
+def markdown(module_file: str) -> str:
+    """The Markdown file next to a topic's module, for text too long to edit as a Python string."""
+    return Path(module_file).with_suffix(".md").read_text(encoding="utf-8").strip()
