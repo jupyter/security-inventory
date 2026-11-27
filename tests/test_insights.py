@@ -185,7 +185,7 @@ def test_the_topics_and_counts_of_an_owner_page_link_to_their_repos_on_the_topic
     data = make_data(make_repo("o/r", []))
     data.topics = [{"id": "t", "title": "T & co", "question": "Q?"}]
     data.results = {"t": {"o/r": {"status": "done"}}}
-    topic, _, _, done, partial, *_ = insights.topic_summary(data, ["o/r"], {"owner": "Jupyter Book"}).cells[0]
+    topic, _, _, _, done, partial, *_ = insights.topic_summary(data, ["o/r"], {"owner": "Jupyter Book"}).cells[0]
     assert topic == '<a href="../topics/t.html?owner=Jupyter%20Book#repositories">T &amp; co</a>'
     assert done == '<a href="../topics/t.html?owner=Jupyter%20Book&amp;status=done#repositories">1</a>'
     assert partial == "0"  # nothing to list

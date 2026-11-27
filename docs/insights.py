@@ -87,9 +87,9 @@ html_theme.sidebar_secondary.remove: true
 
 # {title}
 
-{question}
+**{question}**
 
-{headline}
+{status}
 
 {detection}
 
@@ -247,11 +247,6 @@ def dependents(top: str | None, count: str) -> str:
 def date(day: str | None) -> str:
     """A date in a table, kept on one line: '2026-10-28' would otherwise wrap at its hyphens."""
     return f"[{day}]{{.date}}" if day else ""
-
-
-def counted(number: int, one: str, many: str) -> str:
-    """counted(1, "is a boundary", "are boundaries") -> '1 is a boundary'."""
-    return f"{number} {one if number == 1 else many}"
 
 
 def summary_sentence(subject: str, counts: dict) -> str:
@@ -512,13 +507,37 @@ def topic_counts(data: Data, topic: dict, names) -> Counter:
     return Counter(results[name]["status"] for name in names)
 
 
+def in_scope(counts: Counter) -> int:
+    return counts["done"] + counts["partial"] + counts["missing"]
+
+
+COUNTS_HEADER = ["in scope", "done", "partial", "missing", "not applicable"]
+
+
+def count_values(counts: Counter) -> list[int]:
+    return [in_scope(counts), *(counts[status] for status in STATUSES)]
+
+
+def count_cells(counts: Counter, page: str, **scope) -> list[str]:
+    """The counts of count_values(), each linked to the repos it counts in the repository table of a topic page.
+
+    Not the n/a count: that table leaves those repos out.
+    """
+    statuses = [None, "done", "partial", "missing"]
+    linked = [
+        count_link(counts[status] if status else in_scope(counts), repos_href(page, **scope, status=status))
+        for status in statuses
+    ]
+    return [*linked, str(counts[NOT_APPLICABLE])]
+
+
 def progress(counts: Counter) -> int:
     """The percentage of done repos among those the topic applies to. Rounded down, so 100 means finished.
 
     A topic that applies to none of the repos has nothing left to do, so it is finished too.
     """
-    applicable = counts["done"] + counts["partial"] + counts["missing"]
-    return counts["done"] * 100 // applicable if applicable else 100
+    total = in_scope(counts)
+    return counts["done"] * 100 // total if total else 100
 
 
 def progress_cell(counts: Counter) -> str:
@@ -527,8 +546,8 @@ def progress_cell(counts: Counter) -> str:
     Raw HTML, since MyST drops a style attribute. The percentage stays in the text, which DataTables sorts by.
     """
     percent = progress(counts)
-    applicable = counts["done"] + counts["partial"] + counts["missing"]
-    partial = counts["partial"] * 100 / applicable if applicable else 0
+    total = in_scope(counts)
+    partial = counts["partial"] * 100 / total if total else 0
     title = f"{counts['done']} done, {counts['partial']} partial, {counts['missing']} missing"
     classes = "topic-label topic-finished" if percent == 100 else "topic-label"
     label = f'<span class="{classes}">{percent}%</span>'
@@ -557,29 +576,25 @@ def topic_summary(data: Data, names, scope: dict | None = None) -> Table:
     """
     scope = scope or {}
     root = "../" if scope else ""
-    header = ["topic", "progress", "question", "done", "partial", "missing", "not applicable"]
+    header = ["topic", "progress", "question", *COUNTS_HEADER]
     rows, cells = [], []
     for topic in data.topics:
         counts = topic_counts(data, topic, names)
-        statuses = [counts[status] for status in STATUSES]
-        rows.append([topic["title"], progress(counts), topic["question"], *statuses])
+        rows.append([topic["title"], progress(counts), topic["question"], *count_values(counts)])
         page = f"{root}topics/{topic['id']}.html"
         if scope:
             title = f'<a href="{html.escape(repos_href(page, **scope))}">{html.escape(topic["title"])}</a>'
         else:
             title = f"[{plain(topic['title'])}](/topics/{topic['id']}.md)"
-        linked = [  # not the n/a count: the topic page leaves those repos out
-            count_link(counts[status], repos_href(page, **scope, status=status))
-            if status != NOT_APPLICABLE
-            else counts[status]
-            for status in STATUSES
-        ]
-        cells.append([title, progress_cell(counts), plain(topic["question"]), *linked])
+        cells.append([title, progress_cell(counts), plain(topic["question"]), *count_cells(counts, page, **scope)])
     return Table(header, rows, cells)
 
 
 def topic_group_table(data: Data, topic: dict, column: str) -> Table:
-    """The repos a topic applies to, by organization or by owner. The most left to do first."""
+    """The repos by organization or by owner. The most left to do first.
+
+    A group whose repos are all n/a is finished, like a topic that applies to none of the repos.
+    """
     if column == "organization":
         group, linked, param = (lambda repo: repo["org"]), org_link, "org"
     else:
@@ -587,23 +602,15 @@ def topic_group_table(data: Data, topic: dict, column: str) -> Table:
     groups = {}
     for name in data.results[topic["id"]]:
         groups.setdefault(group(data.repos[name]), []).append(name)
-    rows, bars = [], {}
+    rows, cells = [], {}
     for key, names in groups.items():
         counts = topic_counts(data, topic, names)
-        applies = counts["done"] + counts["partial"] + counts["missing"]
-        if applies:
-            rows.append([key, progress(counts), applies, counts["done"], counts["partial"], counts["missing"]])
-            bars[key] = progress_cell(counts)
+        rows.append([key, progress(counts), *count_values(counts)])
+        # tables.js filters the repository table on the text of its column, which `key` is.
+        cells[key] = [linked(key), progress_cell(counts), *count_cells(counts, "", **{param: key})]
     rows.sort(key=lambda row: (-(row[4] + row[5]), row[0]))
-    header = [column, "progress", "repos it applies to", "done", "partial", "missing"]
-    cells = []
-    for key, _, applies, *statuses in rows:
-        # Each count links to the repos it counts in this page's repository table. tables.js filters on the text of
-        # its column, which `key` is.
-        hrefs = [repos_href("", **{param: key}, status=status) for status in (None, "done", "partial", "missing")]
-        counts = [count_link(count, href) for count, href in zip([applies, *statuses], hrefs)]
-        cells.append([linked(key), bars[key], *counts])
-    return Table(header, rows, cells)
+    header = [column, "progress", *COUNTS_HEADER]
+    return Table(header, rows, [cells[row[0]] for row in rows])
 
 
 def topic_repo_table(data: Data, topic: dict) -> Table:
@@ -642,10 +649,10 @@ def topic_history_table(data: Data, topic: dict) -> Table:
     for day, topics in sorted(data.history.items()):
         counts = topics.get(topic["id"])  # a topic added later has nothing for the earlier days
         if counts and counts != last:
-            rows.append([day, *(counts[status] for status in STATUSES)])
+            rows.append([day, *count_values(Counter(counts))])
             last = counts
     rows.reverse()
-    header = ["date", "done", "partial", "missing", "not applicable"]
+    header = ["date", *COUNTS_HEADER]
     return Table(header, rows, [[date(row[0]), *row[1:]] for row in rows])
 
 
@@ -660,15 +667,12 @@ def topic_page(data: Data, topic: dict) -> str:
     for part, table in tables.items():
         table.write(f"{stem}-{part}")
 
+    # The topic's counts as a plain Markdown table: one row needs no sorting or search.
     counts = topic_counts(data, topic, data.results[topic["id"]])
-    applies = counts["done"] + counts["partial"] + counts["missing"]
-    headline = (
-        f"It applies to {counted(applies, 'repository', 'repositories')}:"
-        f" {counts['done']} done, {counts['partial']} partial and {counts['missing']} missing."
-    )
-    if counts[NOT_APPLICABLE]:
-        not_applicable = counted(counts[NOT_APPLICABLE], "is not applicable", "are not applicable")
-        headline += f" {not_applicable} and left out of the tables."
+    header = ["progress", *COUNTS_HEADER]
+    # The page's own name, so that the link without a status drops the status the URL may already have.
+    cells = [progress_cell(counts), *count_cells(counts, f"{topic['id']}.html")]
+    status = "\n".join(f"| {' | '.join(row)} |" for row in [header, ["---"] * len(header), cells])
 
     def table(part: str, **filters) -> str:
         return csv_table(f"{stem}-{part}", **filters) if len(tables[part]) else NO_ROWS
@@ -676,7 +680,7 @@ def topic_page(data: Data, topic: dict) -> str:
     return TOPIC_PAGE.format(
         title=plain(topic["title"]),
         question=plain(topic["question"]),
-        headline=headline,
+        status=status,
         # detection and status meanings are inlined so they can use markdown
         detection=topic["detection"],
         legend="\n".join(f"- {status_chip(status)} {topic['meanings'][status]}" for status in STATUSES),
