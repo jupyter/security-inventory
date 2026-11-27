@@ -10,11 +10,25 @@ DataTable.type("html-num-fmt", "detect", {
   allOf: (cell, settings) => cell === "" || numFmtAllOf(cell, settings),
 });
 
-/* A table of 10 rows or fewer, the smallest page size, fits on one page: its search box, count, page size and pager
-   only take room. Sorting, the filters and the download link stay. */
+/* The repository tables are long and the reason people come, so they show more rows a page than the others. */
+function setPageLength(api) {
+  if ($(api.table().node()).closest("section#repositories").length) api.page.len(50).draw(false);
+}
+
+/* A table that fits on one page needs no search box, page size or pager. Sorting, the filters, the count and the
+   download link stay. */
 function hideControlsOfSmallTable(api) {
-  if (api.rows().count() > 10) return;
-  $(api.table().container()).find(".dt-search > label, .dt-search > input, .dt-info, .dt-length, .dt-paging").hide();
+  if (api.rows().count() > api.page.len()) return;
+  const container = $(api.table().container()).addClass("one-page");
+  container.find(".dt-search > label, .dt-search > input, .dt-length, .dt-paging").hide();
+}
+
+/* conf.py hands this to DataTables as its infoCallback option. When the rows shown fit on one page, "13 entries", or
+   "5 of 432 entries" when filtered, rather than "Showing 1 to 13 of 13 entries". */
+function tableInfo(settings, start, end, max, total, text) {
+  if (total > settings.api.page.len()) return text;
+  const entries = `${total.toLocaleString()} ${total === 1 ? "entry" : "entries"}`;
+  return total === max ? entries : `${total.toLocaleString()} of ${max.toLocaleString()} entries`;
 }
 
 /* Hides a row of controls left with nothing to show, like the top row of a small table without filters. */
@@ -99,6 +113,7 @@ function keepFilledIn(api) {
 
 /* conf.py hands this to DataTables as its initComplete option. */
 function initTable(settings) {
+  setPageLength(settings.api);
   hideControlsOfSmallTable(settings.api);
   addFilters(settings);
   moveDownload(settings.api);

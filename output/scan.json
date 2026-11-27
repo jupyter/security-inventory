@@ -2448,7 +2448,7 @@
     "security_policy": null
   },
   "jupyter-book/jupyter-book": {
-    "head": "f3375e5258238b1bf8b4c4e5803e0a6001ace0b1",
+    "head": "580c5fcc20293d72d11b1db04e1771f5a4664e18",
     "n_files": 80,
     "file_types": {
       "config": 17,
@@ -2995,10 +2995,10 @@
     "security_policy": null
   },
   "jupyter-book/mystmd": {
-    "head": "c415507b3b2c197a56b482a75b2a7ec18e6fd72c",
-    "n_files": 1803,
+    "head": "53b838790d31e3430154279a70bcd855a6e04cda",
+    "n_files": 1804,
     "file_types": {
-      "docs": 474,
+      "docs": 475,
       "config": 451,
       "other": 77,
       "code": 695,
@@ -8830,7 +8830,7 @@
     "security_policy": null
   },
   "jupyter/security-inventory": {
-    "head": "d66aebb9200f162bd19e9a5baa8db42bcdfd4eb7",
+    "head": "d550ab2407b2c214556edcdc02a14f93f4236ed5",
     "n_files": 67,
     "file_types": {
       "config": 14,
@@ -9146,8 +9146,8 @@
     "security_policy": null
   },
   "jupyter/try-jupyter": {
-    "head": "60464adcaabe28665fd085b27195251c5fb9d572",
-    "n_files": 40,
+    "head": "f2fb32d9a4bb323821c50d707fc333b0f0ba0eec",
+    "n_files": 41,
     "file_types": {
       "other": 4,
       "config": 17,
@@ -9155,7 +9155,7 @@
       "data": 2,
       "media": 2,
       "notebook": 8,
-      "code": 6
+      "code": 7
     },
     "packages": [
       {
@@ -9192,7 +9192,7 @@
     "images": [],
     "build_requires": [],
     "mentions": {},
-    "readme": "# Try Jupyter, powered by JupyterLite\n\n[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyter.org/try-jupyter)\n\nA tour of Jupyter and IPython, powered by JupyterLite.\n\n## ✨ Try it in your browser ✨\n\n➡️ **https://jupyter.org/try-jupyter**\n\nClicking the link above should load a JupyterLab environment running in your browser. Open the Introductory notebook at `notebooks/Intro.ipynb` to get started.\n\n## About this repository\n\nThis is a demonstration repository meant for use at `try.jupyter.org`. It uses the [JupyterLite project](https://jupyterlite.readthedocs.io/en/latest/) to embed a self-contained Jupyter environment in the browser, along with many popular packages in scientific computing.\n\nIt uses GitHub pages to serve the JupyterLite bundle, and is accessible at https://jupyter.org/try-jupyter.\n\n### How to edit these notebooks\n\nThe notebooks in this repository are written with [JupyterLite kernels](https://jupyterlite.readthedocs.io/en/latest/kernels/index.html), so if you edit them locally, you will likely over-write the kernel information with your local kernels.\nAs such, the easiest way to make edits to them is to do so [**via the Try Jupyter Page**](https://jupyter.org/try-jupyter).\nMake the edits you wish at that URL, then download the notebook and replace the one in a repository locally.\n\n### Report a Problem dialog\n\nThe `feedback` folder holds a prebuilt JupyterLab extension, written by hand in `feedback/static/remoteEntry.js` so that it needs no build.\nIt adds **Help > Report a Problem…**, which asks what the problem is about and opens a pre-filled issue in the repository that matches the answer.\n",
+    "readme": "# Try Jupyter, powered by JupyterLite\n\n[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyter.org/try-jupyter)\n\nA tour of Jupyter and IPython, powered by JupyterLite.\n\n## ✨ Try it in your browser ✨\n\n➡️ **https://jupyter.org/try-jupyter**\n\nClicking the link above should load a JupyterLab environment running in your browser. Open the Introductory notebook at `notebooks/Intro.ipynb` to get started.\n\n## About this repository\n\nThis is a demonstration repository meant for use at `try.jupyter.org`. It uses the [JupyterLite project](https://jupyterlite.readthedocs.io/en/latest/) to embed a self-contained Jupyter environment in the browser, along with many popular packages in scientific computing.\n\nIt uses GitHub pages to serve the JupyterLite bundle, and is accessible at https://jupyter.org/try-jupyter.\n\n### How to edit these notebooks\n\nThe notebooks in this repository are written with [JupyterLite kernels](https://jupyterlite.readthedocs.io/en/latest/kernels/index.html), so if you edit them locally, you will likely over-write the kernel information with your local kernels.\nAs such, the easiest way to make edits to them is to do so [**via the Try Jupyter Page**](https://jupyter.org/try-jupyter).\nMake the edits you wish at that URL, then download the notebook and replace the one in a repository locally.\n\n### Beta site\n\nThe beta site at https://jupyter.org/try-jupyter/beta/ serves the same notebooks with the pre-releases of JupyterLite, JupyterLab and Jupyter Notebook.\n`pixi run build-beta` builds it into `dist/beta` after `pixi run build`, and it loads the xeus kernel packages of the stable site to stay within the 1 GB limit of GitHub Pages.\nTo follow a newer pre-release of a package, set its label channel (`_alpha`, `_beta` or `_rc`) and its lower bound in `pyproject.toml`, then run `pixi update -e beta`.\nRemove the label channel of a package once its final release is on conda-forge.\n\n### Report a Problem dialog\n\nThe `feedback` folder holds a prebuilt JupyterLab extension, written by hand in `feedback/static/remoteEntry.js` so that it needs no build.\nIt adds **Help > Report a Problem…**, which asks what the problem is about and opens a pre-filled issue in the repository that matches the answer.\n",
     "security_policy": null
   },
   "jupyter/try.jupyter.org": {
@@ -11159,7 +11159,7 @@
     "security_policy": null
   },
   "jupyterhub/action-get-quayio-tags": {
-    "head": "1948d413db4aa204efe8b940ec03696579704924",
+    "head": "01fab5552af5bf73c7c03d6cf9a3f6feb69a4f0c",
     "n_files": 30,
     "file_types": {
       "other": 6,
@@ -12953,7 +12953,7 @@
     "security_policy": null
   },
   "jupyterhub/mybinder.org-deploy": {
-    "head": "78e39bb5433174f7f64867093df009499bb42d21",
+    "head": "2c31270c55351cf594ac39f16e21c247ebbf746f",
     "n_files": 315,
     "file_types": {
       "other": 42,
@@ -15199,13 +15199,13 @@
     "security_policy": null
   },
   "jupyterlab/jupyter-builder": {
-    "head": "2721be1540683fbde7ac6a9404a3d61965d44ad0",
-    "n_files": 65,
+    "head": "d03c79956b85d13229f939db3ce8f8bfa7436b64",
+    "n_files": 66,
     "file_types": {
       "config": 19,
       "other": 4,
       "docs": 5,
-      "code": 37
+      "code": 38
     },
     "packages": [
       {
@@ -15646,13 +15646,13 @@
     "security_policy": null
   },
   "jupyterlab/jupyterlab": {
-    "head": "585894cf7b1a5a226d579bcd94c9e759df5ceb86",
-    "n_files": 3142,
+    "head": "66a6ea71b0e2bfd0d1a3062b16e2b839e5439152",
+    "n_files": 3144,
     "file_types": {
       "config": 605,
       "other": 24,
       "docs": 186,
-      "code": 1415,
+      "code": 1417,
       "web": 259,
       "media": 618,
       "notebook": 35
@@ -17386,11 +17386,11 @@
     "security_policy": null
   },
   "jupyterlab/lumino": {
-    "head": "9abb236f76d1b0ef7993d8d3cdecc58cea5c2600",
-    "n_files": 470,
+    "head": "6586ee6a167e39a2fb8e1e0a0056919fd0e65044",
+    "n_files": 475,
     "file_types": {
       "other": 13,
-      "code": 255,
+      "code": 260,
       "config": 121,
       "docs": 32,
       "web": 43,
@@ -17535,13 +17535,13 @@
       "actions/cache@v6",
       "actions/checkout@v7",
       "actions/create-github-app-token@v3",
-      "actions/setup-node@v6",
-      "apache/skywalking-eyes@v0.8.0",
+      "actions/setup-node@v7",
+      "apache/skywalking-eyes@v0.9.0",
       "dessant/lock-threads@v6",
       "github/codeql-action@v4",
       "jupyter-server/jupyter_releaser@v2",
       "jupyterlab/maintainer-tools@v1",
-      "toshimaru/auto-author-assign@v3.0.3"
+      "toshimaru/auto-author-assign@v3.1.0"
     ],
     "images": [],
     "build_requires": [],
@@ -18084,15 +18084,15 @@
     }
   },
   "jupyterlite/cockle": {
-    "head": "114b3f41cd8d7eccd25bb69fde06a696dec5196b",
-    "n_files": 270,
+    "head": "011d4a5c6759015d4142df90361ec8686128605e",
+    "n_files": 276,
     "file_types": {
-      "config": 23,
+      "config": 24,
       "other": 5,
       "docs": 6,
       "media": 2,
       "web": 4,
-      "code": 230
+      "code": 235
     },
     "packages": [
       {
@@ -18103,8 +18103,9 @@
       }
     ],
     "workflows": {
-      "count": 6,
+      "count": 7,
       "triggers": [
+        "issue_comment",
         "pull_request",
         "push",
         "workflow_dispatch"
@@ -18136,7 +18137,7 @@
     "images": [],
     "build_requires": [],
     "mentions": {},
-    "readme": "# cockle\n\n[![codecov](https://codecov.io/gh/jupyterlite/cockle/graph/badge.svg)](https://codecov.io/gh/jupyterlite/cockle)\n\nIn-browser bash-like shell implemented in a combination of TypeScript and WebAssembly.\n\nUsed in the [JupyterLite terminal extension](https://github.com/jupyterlite/terminal).\n\nTry it out outside of JupyterLite on GitHub Pages at https://jupyterlite.github.io/cockle.\n\n<img alt=\"Demo\" src=\"demo.png\" width=\"800px\">\n\nCommands of the following types are supported:\n\n1. Built-in TypeScript commands such as `history`. The source code for these is within this repo.\n2. WebAssembly commands, from C/C++ source code, compiled into `.js` and `.wasm` files.\n   These are usually built by [Emscripten-forge](https://emscripten-forge.org/) although they can be\n   manually built, and are added to a deployment during the deployment build process.\n3. JavaScript commands that are loaded and run in the same as WebAssembly commands except they have\n   a `.js` file and no `.wasm` file. There is an example of creating a JavaScript command from\n   TypeScript source code for use in the Jupyterlite terminal in the\n   [terminal-javascript-command](https://github.com/ianthomas23/terminal-javascript-command) repo.\n4. External commands which are TypeScript commands that run in the main browser UI thread rather\n   than the WebWorker that the `cockle` shell runs in. These are registered when a `cockle` `Shell`\n   is constructed. There is an example of an external command which is packaged as a JupyterLite\n   extension in the\n   [terminal-external-command](https://github.com/ianthomas23/terminal-external-command) repo.\n\n[Emscripten-forge](https://emscripten-forge.org/) packages containing WebAssembly commands that are\ncurrently supported and tested are as follows. Each package contains a single commmand with the same\nname as the package unless otherwise specified:\n\n- `awk`\n- `coreutils`: multiple core commands including `cat`, `cp`, `echo`, `ls`, `mkdir`, `mv`, `rm`, `touch`, `uname`, and `wc`\n- `findutils`: `find` command\n- [`git2cpp`](https://git2cpp.readthedocs.io/): a `git` implementation\n- `grep`\n- `less`\n- `lua`\n- `nano`\n- `sed`\n- `tree`\n- `vim`\n\n## Version compatibility\n\nThe filesystem used in `cockle` is built using a specific version of Emscripten, and for maximum\ncompatibility the WebAssembly commands used in `cockle` should be built using the same version of\nEmscripten. WebAssembly commands built on Emscripten-forge are hosted on different\n[prefix.dev](https:/",
+    "readme": "# cockle\n\n[![codecov](https://codecov.io/gh/jupyterlite/cockle/graph/badge.svg)](https://codecov.io/gh/jupyterlite/cockle)\n\nIn-browser bash-like shell implemented in a combination of TypeScript and WebAssembly.\n\nUsed in the [JupyterLite terminal extension](https://github.com/jupyterlite/terminal).\n\nTry it out outside of JupyterLite on GitHub Pages at https://jupyterlite.github.io/cockle.\n\n<img alt=\"Demo\" src=\"demo.png\" width=\"800px\">\n\nCommands of the following types are supported:\n\n1. Built-in TypeScript commands such as `history`. The source code for these is within this repo.\n2. WebAssembly commands, from C/C++ source code, compiled into `.js` and `.wasm` files.\n   These are usually built by [Emscripten-forge](https://emscripten-forge.org/) although they can be\n   manually built, and are added to a deployment during the deployment build process.\n3. JavaScript commands that are loaded and run in the same as WebAssembly commands except they have\n   a `.js` file and no `.wasm` file. There is an example of creating a JavaScript command from\n   TypeScript source code for use in the Jupyterlite terminal in the\n   [terminal-javascript-command](https://github.com/ianthomas23/terminal-javascript-command) repo.\n4. External commands which are TypeScript commands that run in the main browser UI thread rather\n   than the WebWorker that the `cockle` shell runs in. These are registered when a `cockle` `Shell`\n   is constructed. There is an example of an external command which is packaged as a JupyterLite\n   extension in the\n   [terminal-external-command](https://github.com/ianthomas23/terminal-external-command) repo.\n\n[Emscripten-forge](https://emscripten-forge.org/) packages containing WebAssembly commands that are\ncurrently supported and tested are as follows. Each package contains a single commmand with the same\nname as the package unless otherwise specified:\n\n- `awk`\n- `coreutils`: multiple core commands including `cat`, `cp`, `echo`, `ls`, `mkdir`, `mv`, `rm`, `touch`, `uname`, and `wc`\n- `findutils`: `find` command\n- [`git2cpp`](https://git2cpp.readthedocs.io/): a `git` implementation\n- `grep`\n- `less`\n- `lua`\n- `nano`\n- `ripgrep`: `rg` command\n- `sed`\n- `tree`\n- `vim`\n\n## Version compatibility\n\nThe filesystem used in `cockle` is built using a specific version of Emscripten, and for maximum\ncompatibility the WebAssembly commands used in `cockle` should be built using the same version of\nEmscripten. WebAssembly commands built on Emscripten-forge are hosted on diff",
     "security_policy": null
   },
   "jupyterlite/demo": {
@@ -18981,7 +18982,7 @@
     "security_policy": null
   },
   "jupyterlite/terminal": {
-    "head": "37a250bcad178880c844a99f1fe48f31b661f695",
+    "head": "214e4603521201999ed4420102d927d1e211f115",
     "n_files": 85,
     "file_types": {
       "config": 28,
