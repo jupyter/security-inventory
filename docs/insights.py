@@ -683,7 +683,7 @@ def topic_page(data: Data, topic: dict) -> str:
         owners=table("owners"),
         orgs=table("orgs"),
         legend_of_kinds=LEGEND,
-        repos=table("repos", by_org=True, by_owner=True, by_status=True),
+        repos=table("repos", by_org=True, by_owner=True, by_status=True, download=True),
         history=table("history"),
     )
 
@@ -710,17 +710,18 @@ def repo_topics(data: Data, name: str) -> str:
     return "\n".join(lines)
 
 
-def csv_table(stem: str, by_org: bool = False, by_owner: bool = False, by_status: bool = False) -> str:
-    """The Markdown for a sortable table whose rows are in <stem>.csv, with a link to download them.
+def csv_table(
+    stem: str, by_org: bool = False, by_owner: bool = False, by_status: bool = False, download: bool = False
+) -> str:
+    """The Markdown for a sortable table whose rows are in <stem>.csv.
 
-    `by_org`, `by_owner`, `by_status`: the table's organization, owner or status column gets a filter.
+    `by_org`, `by_owner`, `by_status`: the table's organization, owner or status column gets a filter. `download`: a
+    link to download the rows comes first. Only the repository tables have one: the others are short summaries.
     """
     filters = {"filter-by-org": by_org, "filter-by-owner": by_owner, "filter-by-status": by_status}
     classes = " ".join(["sphinx-datatable", *(cls for cls, on in filters.items() if on)])
-    return (
-        f"{{download}}`Download Full CSV </_generated/downloads/{stem}.csv>`\n\n"
-        f"```{{csv-table}}\n:file: /_generated/{stem}.csv\n:header-rows: 1\n:class: {classes}\n```"
-    )
+    link = f"{{download}}`Download Full CSV </_generated/downloads/{stem}.csv>`\n\n" if download else ""
+    return f"{link}```{{csv-table}}\n:file: /_generated/{stem}.csv\n:header-rows: 1\n:class: {classes}\n```"
 
 
 def sections(
@@ -739,12 +740,12 @@ def sections(
     table. With more than one section, a line of links to them comes first. `by_org`: the package and image tables
     have an organization column. `by_owner`: the repository tables get an owner filter.
     """
-    groups = [  # (title, note, the filters of its tables, [(subtitle, table stem, table)])
+    groups = [  # (title, note, the options of its tables, [(subtitle, table stem, table)])
         ("Security topics", TOPICS_NOTE, {}, [(None, f"{scope}-topics", topics)]),
         (
             "Repositories",
             LEGEND,
-            {"by_owner": by_owner},
+            {"by_owner": by_owner, "download": True},
             [("Software", f"{scope}-repos", software), ("Documentation and examples", f"{scope}-docs", docs)],
         ),
         (

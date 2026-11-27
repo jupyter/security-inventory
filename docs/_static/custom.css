@@ -51,6 +51,7 @@ a.download code { font: inherit; background: none; border: 0; padding: 0; color:
    the count and nothing between the page size and its label. */
 div.dt-container div.dt-layout-row div.dt-layout-cell > .dt-info { margin-right: 0.35em; }
 div.dt-container .dt-info::after { content: ","; }
+div.dt-container.one-page .dt-info::after { content: none; }  /* no page size after it */
 div.dt-container .dt-length label { margin-left: 0.35em; }
 
 .status { padding: 0.1em 0.45em; border-radius: 0.3em; white-space: nowrap; }

@@ -29,10 +29,10 @@ myst_substitutions = insights.build()
 
 # The big tables are sortable and searchable with DataTables, loaded from cdn.datatables.net.
 datatables_version = "3.1.4"
-# Keep the order the tables are generated in. initTable is defined in _static/tables.js, so this has to stay a string.
+# 20 rows a page, and 50 for the repository tables (see tables.js). Keep the order the tables are generated in. initTable and tableInfo are defined in _static/tables.js, so this has to stay a string.
 # The layout puts only the search box above a table (tables.js adds the filters beside it), and the count and page size
 # below it, next to the pager (tables.js adds the download link after it).
 datatables_options = (
-    '{"pageLength": 50, "order": [], "autoWidth": false, "initComplete": initTable,'
-    ' "layout": {"topStart": null, "topEnd": "search", "bottomStart": ["info", "pageLength"], "bottomEnd": "paging"}}'
+    '{"pageLength": 20, "lengthMenu": [20, 50, 100, 200], "order": [], "autoWidth": false, "initComplete": initTable,'
+    ' "infoCallback": tableInfo, "layout": {"topStart": null, "topEnd": "search", "bottomStart": ["info", "pageLength"], "bottomEnd": "paging"}}'
 )
