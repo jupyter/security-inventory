@@ -4424,7 +4424,7 @@
     "security_policy": null
   },
   "jupyter-server/jupyter_ydoc": {
-    "head": "5886decd687efd0a9005df3c3805476e1a36c7cf",
+    "head": "7969ea4af3c992e7c0cc625df5f1a9e027dd8fff",
     "n_files": 76,
     "file_types": {
       "config": 22,
@@ -4466,16 +4466,16 @@
       ],
       "pull_request_target": {
         ".github/workflows/auto_author_assign.yml": false,
-        ".github/workflows/enforce-label.yml": false,
-        ".github/workflows/license-header.yml": false
+        ".github/workflows/enforce-label.yml": false
       }
     },
     "uses": [
+      "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
       "actions/checkout@v7",
       "actions/create-github-app-token@v3",
       "actions/setup-python@v7",
       "actions/upload-artifact@v7",
-      "apache/skywalking-eyes@v0.9.0",
+      "apache/skywalking-eyes@a196742f472feaffafea537ce5a2a4c3c53a8de4",
       "jupyter-server/jupyter_releaser@v2",
       "jupyterlab/maintainer-tools@v1",
       "mamba-org/setup-micromamba@v3",
@@ -6759,20 +6759,19 @@
     "security_policy": null
   },
   "jupyter/community-committee": {
-    "head": "e913c155fae238d6903bfdc3bb696b50d3a4b6e4",
-    "n_files": 51,
+    "head": "8ffeaded9a652df5f3a24a25484f90c8fb543679",
+    "n_files": 50,
     "file_types": {
       "other": 3,
       "docs": 39,
-      "config": 8,
+      "config": 7,
       "web": 1
     },
     "packages": [],
     "workflows": {
-      "count": 3,
+      "count": 2,
       "triggers": [
         "issue_comment",
-        "pull_request_target",
         "push",
         "schedule",
         "workflow_dispatch"
@@ -6783,17 +6782,14 @@
       "publishes": [
         "website"
       ],
-      "pull_request_target": {
-        ".github/workflows/pr-rtd-link.yml": false
-      }
+      "pull_request_target": {}
     },
     "uses": [
       "actions/checkout@v4",
       "actions/deploy-pages@v4",
       "actions/upload-pages-artifact@v3",
       "mfisher87/hackmd-meeting-notes-action@main",
-      "prefix-dev/setup-pixi@v0.8.8",
-      "readthedocs/actions@v1"
+      "prefix-dev/setup-pixi@v0.8.8"
     ],
     "images": [],
     "build_requires": [],
@@ -6802,7 +6798,7 @@
         ".pre-commit-config.yaml"
       ]
     },
-    "readme": "# Jupyter Community Committee Team compass\n\n**A team compass is a place for community members, new and old, to align on objectives,\npractices, and happenings.**\n\nPlease use this repository's issue tracker for any changes related to our policies or\npractices -- how we communicate, how we work together.\n\n\n## Contributing\n\nThis is a [MySTMD](https://mystmd.org) project.\nThe development environment is managed by [Pixi](https://pixi.sh).\n\n\n### Start a local preview server\n\n```bash\npixi run preview\n```\n\nThis will start a local preview server.\nView your changes immediately in your browser!\nAny changes to the website content will trigger an automatic re-render.\n\n\n### Render the website\n\n```bash\npixi run render\n```\n\n\n## Common activities\n\n### Initialize and sync meeting notes\n\nInitialize meeting notes on HackMD by navigating to the \"Actions\" tab of this repo.\nThen select \"Setup / sync meeting notes\" on the left panel.\nNow click \"Run workflow\" in the main workflow listing panel.\nFinally, fill in the kind of meeting you're initializing and the date, and click \"Run workflow\".\n\n<details>\n  <summary>Screenshot</summary>\n  <img src=\"https://github.com/user-attachments/assets/db567500-48ee-4e32-8cf3-5eab01cce96c\">\n</details>\n\nA Pull Request and HackMD document will be created.\nVisit the PR to find the HackMD link.\n\nWhen you're ready to sync data from HackMD back to GitHub, comment in the PR with `/bot please sync notes`.\nSee [an example PR from another project](https://github.com/geojupyter/geojupyter.org/pull/32) for an example.\n\n> [!NOTE]\n> This job may occasionally fail with e.g. 403 response from HackMD.\n> In the past, re-running the job has worked.\n",
+    "readme": "# Jupyter Community Committee Team compass\n\nPlease use this repository's issue tracker for any changes related to our policies or\npractices.\n\n\n## Contributing\n\nThis is a [MySTMD](https://mystmd.org) project.\nThe development environment is managed by [Pixi](https://pixi.sh).\n\n\n### Start a local preview server\n\n```bash\npixi run preview\n```\n\nThis will start a local preview server.\nView your changes immediately in your browser!\nAny changes to the website content will trigger an automatic re-render.\n\n\n### Render the website\n\n```bash\npixi run render\n```\n\n\n## Common activities\n\n### Initialize and sync meeting notes\n\nInitialize meeting notes on HackMD by navigating to the \"Actions\" tab of this repo.\nThen select \"Setup / sync meeting notes\" on the left panel.\nNow click \"Run workflow\" in the main workflow listing panel.\nFinally, fill in the kind of meeting you're initializing and the date, and click \"Run workflow\".\n\n<details>\n  <summary>Screenshot</summary>\n  <img src=\"https://github.com/user-attachments/assets/db567500-48ee-4e32-8cf3-5eab01cce96c\">\n</details>\n\nA Pull Request and HackMD document will be created.\nVisit the PR to find the HackMD link.\n\nWhen you're ready to sync data from HackMD back to GitHub, comment in the PR with `/bot please sync notes`.\nSee [an example PR from another project](https://github.com/geojupyter/geojupyter.org/pull/32) for an example.\n\n> [!NOTE]\n> This job may occasionally fail with e.g. 403 response from HackMD.\n> In the past, re-running the job has worked.\n",
     "security_policy": null
   },
   "jupyter/cookiecutter-docker-stacks": {
@@ -8830,14 +8826,14 @@
     "security_policy": null
   },
   "jupyter/security-inventory": {
-    "head": "d550ab2407b2c214556edcdc02a14f93f4236ed5",
-    "n_files": 67,
+    "head": "1791f648b676210f39dd34bc14bbfb510b3b5856",
+    "n_files": 70,
     "file_types": {
       "config": 14,
       "other": 2,
-      "docs": 14,
+      "docs": 15,
       "web": 2,
-      "code": 34,
+      "code": 36,
       "data": 1
     },
     "packages": [
@@ -14264,7 +14260,7 @@
     "security_policy": null
   },
   "jupyterlab/eslint-plugin": {
-    "head": "4635243f67858bd79c1b916de8596b6c8a1b43b3",
+    "head": "a65f54326180900cbd047378dce40d7d02bdfbeb",
     "n_files": 144,
     "file_types": {
       "config": 23,
@@ -14316,7 +14312,6 @@
       "count": 7,
       "triggers": [
         "pull_request",
-        "pull_request_target",
         "push",
         "release",
         "workflow_dispatch"
@@ -14329,11 +14324,10 @@
         "npm",
         "jupyter_releaser"
       ],
-      "pull_request_target": {
-        ".github/workflows/license-header.yml": false
-      }
+      "pull_request_target": {}
     },
     "uses": [
+      "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
       "actions/checkout@v4",
       "actions/checkout@v5",
       "actions/checkout@v6",
@@ -14342,7 +14336,7 @@
       "actions/setup-node@v6",
       "actions/setup-python@v4",
       "actions/upload-artifact@v6",
-      "apache/skywalking-eyes@61275cc80d0798a405cb070f7d3a8aaf7cf2c2c1",
+      "apache/skywalking-eyes@a196742f472feaffafea537ce5a2a4c3c53a8de4",
       "jupyter-server/jupyter_releaser@v2",
       "jupyterlab/maintainer-tools@v1"
     ],
@@ -15267,13 +15261,13 @@
     "security_policy": null
   },
   "jupyterlab/jupyter-chat": {
-    "head": "220bbf7be4beea0c6a1d68ba101b2b67bd645be3",
-    "n_files": 272,
+    "head": "8e5b5a6c99f4157d592d8a1fe5b2868a3c8a4231",
+    "n_files": 273,
     "file_types": {
       "config": 37,
       "other": 11,
       "docs": 16,
-      "code": 172,
+      "code": 173,
       "notebook": 1,
       "web": 12,
       "media": 23
@@ -15356,7 +15350,7 @@
     "security_policy": null
   },
   "jupyterlab/jupyter-collaboration": {
-    "head": "441f0304310d0dc36a9c5e4abba8010a23d00a75",
+    "head": "806a99da398b8ffd1dd82f9654c89aa1cd4070a6",
     "n_files": 211,
     "file_types": {
       "other": 14,
@@ -15450,18 +15444,18 @@
         "jupyter_releaser"
       ],
       "pull_request_target": {
-        ".github/workflows/binder-badge.yml": false,
-        ".github/workflows/license-header.yml": false
+        ".github/workflows/binder-badge.yml": false
       }
     },
     "uses": [
       "actions/cache@v5",
+      "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
       "actions/checkout@v4",
       "actions/create-github-app-token@v1",
       "actions/download-artifact@v4",
       "actions/setup-python@v5",
       "actions/upload-artifact@v4",
-      "apache/skywalking-eyes@v0.4.0",
+      "apache/skywalking-eyes@a196742f472feaffafea537ce5a2a4c3c53a8de4",
       "jupyter-server/jupyter_releaser@v2",
       "jupyterlab/maintainer-tools@main",
       "jupyterlab/maintainer-tools@v1",
@@ -15646,15 +15640,15 @@
     "security_policy": null
   },
   "jupyterlab/jupyterlab": {
-    "head": "66a6ea71b0e2bfd0d1a3062b16e2b839e5439152",
-    "n_files": 3144,
+    "head": "d78ea747f17e95e237bfc8eb06590752098458d7",
+    "n_files": 3148,
     "file_types": {
       "config": 605,
       "other": 24,
       "docs": 186,
-      "code": 1417,
+      "code": 1419,
       "web": 259,
-      "media": 618,
+      "media": 620,
       "notebook": 35
     },
     "packages": [
@@ -18084,15 +18078,15 @@
     }
   },
   "jupyterlite/cockle": {
-    "head": "011d4a5c6759015d4142df90361ec8686128605e",
-    "n_files": 276,
+    "head": "3ec2814639064d9cfe0db50dcd7f95ac3d78cbbd",
+    "n_files": 278,
     "file_types": {
       "config": 24,
       "other": 5,
       "docs": 6,
-      "media": 2,
+      "media": 3,
       "web": 4,
-      "code": 235
+      "code": 236
     },
     "packages": [
       {
@@ -18123,9 +18117,11 @@
       "pull_request_target": {}
     },
     "uses": [
+      "actions/cache@v6",
       "actions/checkout@v7",
       "actions/create-github-app-token@v3",
       "actions/deploy-pages@v5",
+      "actions/download-artifact@v8",
       "actions/upload-artifact@v7",
       "actions/upload-pages-artifact@v5",
       "codecov/codecov-action@v7",
