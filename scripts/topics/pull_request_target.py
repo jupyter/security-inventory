@@ -18,20 +18,22 @@ def check(repo: dict, scan: dict) -> Result:
         return Result(DONE, "No workflow runs on pull_request_target.")
     disabled = set(workflows.get("disabled", []))  # missing from scans made before step 2 asked GitHub
     unmarked = sorted(path for path, ok in reviewed.items() if not ok and path not in disabled)
+    off = sorted(path for path in reviewed if path in disabled)
+    to_delete = []
+    if off:
+        is_, it = ("is", "it") if len(off) == 1 else ("are", "them")
+        to_delete = [f"{names(off)} {is_} disabled: delete {it}."]
     if not unmarked:
-        off = sorted(path for path in reviewed if path in disabled)
         on = sorted(path for path in reviewed if path not in disabled)
         reasons = []
         if on:
             has, it = ("has", "it") if len(on) == 1 else ("have", "them")
             reasons.append(f"{names(on)} {has} a zizmor ignore comment: allow the event for {it} in a policy.")
-        if off:
-            is_, it = ("is", "it") if len(off) == 1 else ("are", "them")
-            reasons.append(f"{names(off)} {is_} disabled: delete {it}.")
-        return Result(PARTIAL, " ".join(reasons), evidence=sorted(reviewed))
-    workflow = "workflow uses" if len(unmarked) == 1 else "workflows use"
+        return Result(PARTIAL, " ".join(reasons + to_delete), evidence=sorted(reviewed))
+    workflow = "enabled workflow uses" if len(unmarked) == 1 else "enabled workflows use"
     reason = f"{len(unmarked)} {workflow} pull_request_target without a zizmor ignore comment."
-    return Result(MISSING, reason, evidence=unmarked)
+    # The disabled ones need deleting too, so they are listed with the ones to fix.
+    return Result(MISSING, " ".join([reason, *to_delete]), evidence=sorted(unmarked + off))
 
 
 def names(paths: list[str]) -> str:
@@ -53,7 +55,7 @@ TOPIC = Topic(
         ),
         MISSING: (
             "At least one of its enabled workflows runs on `pull_request_target` and does not have a zizmor ignore"
-            " comment."
+            " comment. Any disabled ones should be deleted."
         ),
         NOT_APPLICABLE: "The repository has no GitHub workflows.",
     },
