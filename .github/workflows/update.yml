@@ -31,6 +31,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
       - run: python scripts/2_scan_repos.py --clone-dir "$RUNNER_TEMP/clones"
+        env:
+          GH_TOKEN: ${{ github.token }}  # to ask which workflows are disabled
       - run: python scripts/3_packages.py
       - run: python scripts/4_images.py
       - run: python scripts/5_classify.py --clone-dir "$RUNNER_TEMP/clones"
