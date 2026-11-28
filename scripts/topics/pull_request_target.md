@@ -20,7 +20,7 @@ on:
     ...
 ```
 
-To list the workflows in a repo that still need to be fixed, run this in the repo.
+To list the workflows in a repo that still need to be fixed, run this in the repo. It reads only the files, so it also lists disabled workflows: `gh workflow list --all` shows which ones are disabled.
 
 ```sh
 for f in .github/workflows/*.y*ml; do grep -qE '^ *(on:.*|- *)?pull_request_target' "$f" && ! grep -q 'zizmor: *ignore\[[^]]*dangerous-triggers' "$f" && echo "$f"; done

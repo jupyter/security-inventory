@@ -23,7 +23,7 @@ scripts/1..8  ──►  output/*.json, *.csv, *.txt  ──►  docs/insights.p
 | Step | Script | Reads | Writes |
 |---|---|---|---|
 | 1 | `1_inventory.py` | `ORGS`, GitHub | `repos.json` |
-| 2 | `2_scan_repos.py` | `repos.json`, GitHub clones | `scan.json` |
+| 2 | `2_scan_repos.py` | `repos.json`, GitHub clones and API | `scan.json` |
 | 3 | `3_packages.py` | `repos.json`, `scan.json`, PyPI, npm, pypistats, deps.dev | `packages.json` |
 | 4 | `4_images.py` | `NAMESPACES`, `repos.json`, `scan.json`, Docker Hub, Quay | `images.json`, `images.txt` |
 | 5 | `5_classify.py` | `repos.json`, `scan.json`, `packages.json`, clones, LLM | `classification.json` |

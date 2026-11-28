@@ -29,7 +29,7 @@ def check(repo: dict, scan: dict) -> Result:
             is_, it = ("is", "it") if len(off) == 1 else ("are", "them")
             reasons.append(f"{names(off)} {is_} disabled: delete {it}.")
         return Result(PARTIAL, " ".join(reasons), evidence=sorted(reviewed))
-    workflow = "enabled workflow uses" if len(unmarked) == 1 else "enabled workflows use"
+    workflow = "workflow uses" if len(unmarked) == 1 else "workflows use"
     reason = f"{len(unmarked)} {workflow} pull_request_target without a zizmor ignore comment."
     return Result(MISSING, reason, evidence=unmarked)
 
