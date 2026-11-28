@@ -2751,7 +2751,7 @@
     {"topic": "pull-request-target", "repo": "ipython/matplotlib-inline", "status": "done", "reason": "No workflow runs on pull_request_target.", "via": [], "evidence": []},
     {"topic": "pull-request-target", "repo": "ipython/pickleshare", "status": "done", "reason": "No workflow runs on pull_request_target.", "via": [], "evidence": []},
     {"topic": "pull-request-target", "repo": "ipython/traitlets", "status": "done", "reason": "No workflow runs on pull_request_target.", "via": [], "evidence": []},
-    {"topic": "pull-request-target", "repo": "ipython/xkcd-font", "status": "partial", "reason": "preview-link.yml has a zizmor ignore comment: allow the event for it in a policy.", "via": [], "evidence": [".github/workflows/preview-link.yml"]},
+    {"topic": "pull-request-target", "repo": "ipython/xkcd-font", "status": "partial", "reason": "preview-link.yml has a zizmor ignore comment.", "via": [], "evidence": [".github/workflows/preview-link.yml"]},
     {"topic": "pull-request-target", "repo": "jupyter-book/.github", "status": "done", "reason": "No workflow runs on pull_request_target.", "via": [], "evidence": []},
     {"topic": "pull-request-target", "repo": "jupyter-book/blog", "status": "done", "reason": "No workflow runs on pull_request_target.", "via": [], "evidence": []},
     {"topic": "pull-request-target", "repo": "jupyter-book/blog-plugin", "status": "done", "reason": "No workflow runs on pull_request_target.", "via": [], "evidence": []},

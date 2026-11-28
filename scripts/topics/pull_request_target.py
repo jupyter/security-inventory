@@ -19,21 +19,17 @@ def check(repo: dict, scan: dict) -> Result:
     disabled = set(workflows.get("disabled", []))  # missing from scans made before step 2 asked GitHub
     unmarked = sorted(path for path, ok in reviewed.items() if not ok and path not in disabled)
     off = sorted(path for path in reviewed if path in disabled)
-    to_delete = []
-    if off:
-        is_, it = ("is", "it") if len(off) == 1 else ("are", "them")
-        to_delete = [f"{names(off)} {is_} disabled: delete {it}."]
+    disabled_reason = [f"{names(off)} {'is' if len(off) == 1 else 'are'} disabled."] if off else []
     if not unmarked:
         on = sorted(path for path in reviewed if path not in disabled)
         reasons = []
         if on:
-            has, it = ("has", "it") if len(on) == 1 else ("have", "them")
-            reasons.append(f"{names(on)} {has} a zizmor ignore comment: allow the event for {it} in a policy.")
-        return Result(PARTIAL, " ".join(reasons + to_delete), evidence=sorted(reviewed))
+            reasons.append(f"{names(on)} {'has' if len(on) == 1 else 'have'} a zizmor ignore comment.")
+        return Result(PARTIAL, " ".join(reasons + disabled_reason), evidence=sorted(reviewed))
     workflow = "enabled workflow uses" if len(unmarked) == 1 else "enabled workflows use"
     reason = f"{len(unmarked)} {workflow} pull_request_target without a zizmor ignore comment."
-    # The disabled ones need deleting too, so they are listed with the ones to fix.
-    return Result(MISSING, " ".join([reason, *to_delete]), evidence=sorted(unmarked + off))
+    # The disabled ones should be deleted, so they are listed with the ones to fix.
+    return Result(MISSING, " ".join([reason, *disabled_reason]), evidence=sorted(unmarked + off))
 
 
 def names(paths: list[str]) -> str:
