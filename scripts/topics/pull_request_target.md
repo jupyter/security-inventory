@@ -12,7 +12,7 @@ on:
     ...
 ```
 
-Example of a workflow counted as `partial` since it has a zizmor comment indicating the workflow has been reviewed and judged safe. We will still need to set up a policy to allow the `pull_request_target` event.
+Example of a workflow counted as `partial` since it has a zizmor comment indicating the workflow has been reviewed and judged safe. We will still need to set up a policy to allow the `pull_request_target` event for it. A disabled workflow also counts as `partial`, but it should be deleted rather than allowed.
 
 ```yaml
 on:

@@ -22,3 +22,13 @@ def test_a_disabled_workflow_counts_as_reviewed():
 def test_a_missing_repo_lists_only_the_workflows_to_fix():
     scan = {"a": {"workflows": {"count": 2, "pull_request_target": {"label.yml": True, "binder.yml": False}}}}
     assert pull_request_target.check({"full_name": "a"}, scan).evidence == ["binder.yml"]
+
+
+def test_a_partial_repo_names_the_workflows_to_allow_and_to_delete():
+    scan = {"a": {"workflows": {"count": 3, "pull_request_target": {"label.yml": True, "fix.yml": False}}}}
+    scan["a"]["workflows"]["disabled"] = ["fix.yml"]
+    reason = pull_request_target.check({"full_name": "a"}, scan).reason
+    assert (
+        reason
+        == "label.yml has a zizmor ignore comment: allow the event for it in a policy. fix.yml is disabled: delete it."
+    )
