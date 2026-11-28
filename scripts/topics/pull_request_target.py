@@ -14,11 +14,12 @@ def check(repo: dict, scan: dict) -> Result:
     reviewed = workflows["pull_request_target"]  # workflow -> whether a zizmor comment marks it as reviewed
     if not reviewed:
         return Result(DONE, "No workflow runs on pull_request_target.")
-    if all(reviewed.values()):
-        reason = "All workflows have a zizmor ignore comment: it needs a policy that allows pull_request_target."
+    disabled = set(workflows.get("disabled", []))  # missing from scans made before step 2 asked GitHub
+    unmarked = sorted(path for path, ok in reviewed.items() if not ok and path not in disabled)
+    if not unmarked:
+        reason = "All workflows are disabled or have a zizmor ignore comment: it needs a policy that allows the event."
         return Result(PARTIAL, reason, evidence=sorted(reviewed))
-    unmarked = sorted(path for path, ok in reviewed.items() if not ok)
-    workflow = "workflow uses" if len(unmarked) == 1 else "workflows use"
+    workflow = "enabled workflow uses" if len(unmarked) == 1 else "enabled workflows use"
     reason = f"{len(unmarked)} {workflow} pull_request_target without a zizmor ignore comment."
     return Result(MISSING, reason, evidence=unmarked)
 
@@ -31,11 +32,13 @@ TOPIC = Topic(
     meanings={
         DONE: "None of its workflows runs on `pull_request_target`.",
         PARTIAL: (
-            "Its workflows that run on `pull_request_target` are all marked as reviewed with a zizmor ignore comment."
+            "Its workflows that run on `pull_request_target` are all disabled or marked as reviewed with a zizmor"
+            " ignore comment."
             " It needs an event policy that allows the event."
         ),
         MISSING: (
-            "At least one of its workflows runs on `pull_request_target` and does not have a zizmor ignore comment."
+            "At least one of its enabled workflows runs on `pull_request_target` and does not have a zizmor ignore"
+            " comment."
         ),
         NOT_APPLICABLE: "The repository has no GitHub workflows.",
     },

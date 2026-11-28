@@ -38,9 +38,9 @@ asks (up to 5 minutes). `RETRIES` counts the retries. `Progress` shows how far a
 terminal.
 
 Step 2 keeps, for each repo: file counts by type, the packages its manifests declare, a summary of its workflows
-(triggers, secrets, what they publish, and which run on pull_request_target and whether a zizmor comment marks them
-as reviewed), the actions it uses, the images its chartpress files build, the build
-requirements of its `pyproject.toml`, the start of its README, its SECURITY.md and the emails in it, and which of a few words (zizmor, pre-commit) its CI files and
+(triggers, secrets, what they publish, and which run on pull_request_target, whether a zizmor comment marks them
+as reviewed and which of them GitHub reports as disabled), the actions it uses, the images its chartpress files build,
+the build requirements of its `pyproject.toml`, the start of its README, its SECURITY.md and the emails in it, and which of a few words (zizmor, pre-commit) its CI files and
 pre-commit config mention. A clone is shallow and holds only those files.
 Symbolic links are never followed.
 

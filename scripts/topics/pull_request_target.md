@@ -2,9 +2,9 @@ A workflow that is triggered by the `pull_request_target` event has access to th
 
 GitHub will start blocking workflow runs triggered by `pull_request_target` by default starting December 2, 2026 (though we may extend that deadline with an org-wide policy).
 
-To detect workflows using `pull_request_target`, we look for `pull_request_target` in the `on` key of each workflow in `.github/workflows`, and we also look for a `zizmor: ignore[dangerous-triggers]` comment which indicates the workflow has been manually reviewed and judged safe.
+To detect workflows using `pull_request_target`, we look for `pull_request_target` in the `on` key of each workflow in `.github/workflows`, and we also look for a `zizmor: ignore[dangerous-triggers]` comment which indicates the workflow has been manually reviewed and judged safe. We also ask GitHub which of these workflows are disabled: a disabled workflow does not run, so it counts like a reviewed one.
 
-Example of a workflow counted as `missing` and needs to be evaluated and fixed:
+Example of a workflow counted as `missing`, unless it is disabled, and needs to be evaluated and fixed:
 
 ```yaml
 on:
