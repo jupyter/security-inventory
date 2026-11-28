@@ -136,7 +136,8 @@
       "publishes": [],
       "pull_request_target": {
         ".github/workflows/binder-badge.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "manics/action-binderbadge@main"
@@ -735,7 +736,8 @@
       "publishes": [],
       "pull_request_target": {
         ".github/workflows/binder-badge.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "manics/action-binderbadge@main"
@@ -763,7 +765,8 @@
       "publishes": [],
       "pull_request_target": {
         ".github/workflows/binder-badge.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "manics/action-binderbadge@main"
@@ -841,7 +844,8 @@
       "publishes": [],
       "pull_request_target": {
         ".github/workflows/binder-badge.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "manics/action-binderbadge@main"
@@ -1872,7 +1876,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/preview-link.yml": true
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
@@ -2653,7 +2658,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v4",
@@ -3248,7 +3254,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/enforce-label.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v4",
@@ -4467,7 +4474,8 @@
       "pull_request_target": {
         ".github/workflows/auto_author_assign.yml": false,
         ".github/workflows/enforce-label.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -5266,7 +5274,8 @@
       "publishes": [],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v6",
@@ -5529,7 +5538,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-badge.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "JamesIves/github-pages-deploy-action@4.1.3",
@@ -6685,7 +6695,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/docs-preview.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v2",
@@ -8105,7 +8116,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-badge.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v5",
@@ -8250,7 +8262,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder.yaml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v4",
@@ -8530,7 +8543,8 @@
       "pull_request_target": {
         ".github/workflows/auto_author_assign.yml": false,
         ".github/workflows/binder.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
@@ -8826,7 +8840,7 @@
     "security_policy": null
   },
   "jupyter/security-inventory": {
-    "head": "1791f648b676210f39dd34bc14bbfb510b3b5856",
+    "head": "5b4906b1eccbeebf9170bca97447bb6c26750a59",
     "n_files": 70,
     "file_types": {
       "config": 14,
@@ -9174,7 +9188,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/rtd-preview.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v4",
@@ -9999,7 +10014,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/pr-rtd-link.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v4",
@@ -10062,7 +10078,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v4",
@@ -12097,7 +12114,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-badge.yaml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v6",
@@ -15193,7 +15211,7 @@
     "security_policy": null
   },
   "jupyterlab/jupyter-builder": {
-    "head": "d03c79956b85d13229f939db3ce8f8bfa7436b64",
+    "head": "3424ceb5f1060cd78e6dedca3cb8c537f37a8376",
     "n_files": 66,
     "file_types": {
       "config": 19,
@@ -15219,7 +15237,6 @@
       "count": 8,
       "triggers": [
         "pull_request",
-        "pull_request_target",
         "push",
         "workflow_dispatch"
       ],
@@ -15231,11 +15248,10 @@
         "npm",
         "jupyter_releaser"
       ],
-      "pull_request_target": {
-        ".github/workflows/license-header.yml": false
-      }
+      "pull_request_target": {}
     },
     "uses": [
+      "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
       "actions/checkout@v7",
       "actions/create-github-app-token@v3",
       "actions/download-artifact@v8",
@@ -15326,7 +15342,10 @@
         ".github/workflows/auto_author_assign.yml": false,
         ".github/workflows/binder-badge.yml": false,
         ".github/workflows/license-header.yml": false
-      }
+      },
+      "disabled": [
+        ".github/workflows/license-header.yml"
+      ]
     },
     "uses": [
       "actions/cache@v3",
@@ -15445,7 +15464,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-badge.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v5",
@@ -15564,7 +15584,8 @@
       "publishes": [],
       "pull_request_target": {
         ".github/workflows/binder.yaml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v3",
@@ -16370,7 +16391,8 @@
         ".github/workflows/auto_author_assign.yml": true,
         ".github/workflows/enforce-label.yml": true,
         ".github/workflows/labeler.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
@@ -16481,7 +16503,8 @@
       "publishes": [],
       "pull_request_target": {
         ".github/workflows/binder_on_pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v3",
@@ -16636,7 +16659,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v3",
@@ -16701,7 +16725,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yaml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v3",
@@ -16761,7 +16786,8 @@
       "publishes": [],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v2",
@@ -16820,7 +16846,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v4",
@@ -16961,7 +16988,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v4",
@@ -17030,7 +17058,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v3",
@@ -17051,7 +17080,7 @@
     "security_policy": null
   },
   "jupyterlab/jupyterlab_server": {
-    "head": "475cfc19e0e69444fc7e3b0e41655cbeb32a8756",
+    "head": "9ba39a1835d424aa1f95b92e12131c96e4c3d591",
     "n_files": 94,
     "file_types": {
       "other": 12,
@@ -17084,7 +17113,6 @@
       "count": 8,
       "triggers": [
         "pull_request",
-        "pull_request_target",
         "push",
         "release",
         "schedule",
@@ -17098,14 +17126,13 @@
         "npm",
         "jupyter_releaser"
       ],
-      "pull_request_target": {
-        ".github/workflows/fix-license-header.yml": false
-      }
+      "pull_request_target": {}
     },
     "uses": [
+      "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
       "actions/checkout@v4",
       "actions/create-github-app-token@v1",
-      "apache/skywalking-eyes@ed436a5593c63a25f394ea29da61b0ac3731a9fe",
+      "apache/skywalking-eyes@a196742f472feaffafea537ce5a2a4c3c53a8de4",
       "github/codeql-action@v3",
       "jupyter-server/jupyter_releaser@v2",
       "jupyterlab/maintainer-tools@v1",
@@ -17523,7 +17550,10 @@
         ".github/workflows/auto-author-assign.yml": false,
         ".github/workflows/enforce-label.yml": false,
         ".github/workflows/license-header.yml": false
-      }
+      },
+      "disabled": [
+        ".github/workflows/license-header.yml"
+      ]
     },
     "uses": [
       "actions/cache@v6",
@@ -17658,7 +17688,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/preview-badges-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v4",
@@ -17973,7 +18004,8 @@
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false,
         ".github/workflows/enforce-label.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v4",
@@ -18344,7 +18376,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v3",
@@ -18515,7 +18548,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/rtd-preview.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v7",
@@ -18696,7 +18730,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v5",
@@ -18769,7 +18804,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/rtd-preview.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v4",
@@ -18873,7 +18909,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/rtd-preview.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v7",
@@ -19023,7 +19060,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/rtd-preview.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/cache@v6",
@@ -19345,7 +19383,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/rtd-preview.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v4",
@@ -19518,7 +19557,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v2",
@@ -19648,7 +19688,8 @@
       ],
       "pull_request_target": {
         ".github/workflows/binder-on-pr.yml": false
-      }
+      },
+      "disabled": []
     },
     "uses": [
       "actions/checkout@v1",
