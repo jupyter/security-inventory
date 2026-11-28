@@ -4,6 +4,8 @@ Its detection text, in pull_request_target.md, is written for the whole Jupyter 
 what to do, with links.
 """
 
+from pathlib import PurePosixPath
+
 from topics import DONE, MISSING, NOT_APPLICABLE, PARTIAL, Result, Topic, markdown
 
 
@@ -14,13 +16,25 @@ def check(repo: dict, scan: dict) -> Result:
     reviewed = workflows["pull_request_target"]  # workflow -> whether a zizmor comment marks it as reviewed
     if not reviewed:
         return Result(DONE, "No workflow runs on pull_request_target.")
-    if all(reviewed.values()):
-        reason = "All workflows have a zizmor ignore comment: it needs a policy that allows pull_request_target."
-        return Result(PARTIAL, reason, evidence=sorted(reviewed))
-    unmarked = sorted(path for path, ok in reviewed.items() if not ok)
-    workflow = "workflow uses" if len(unmarked) == 1 else "workflows use"
+    disabled = set(workflows.get("disabled", []))  # missing from scans made before step 2 asked GitHub
+    unmarked = sorted(path for path, ok in reviewed.items() if not ok and path not in disabled)
+    off = sorted(path for path in reviewed if path in disabled)
+    disabled_reason = [f"{names(off)} {'is' if len(off) == 1 else 'are'} disabled."] if off else []
+    if not unmarked:
+        on = sorted(path for path in reviewed if path not in disabled)
+        reasons = []
+        if on:
+            reasons.append(f"{names(on)} {'has' if len(on) == 1 else 'have'} a zizmor ignore comment.")
+        return Result(PARTIAL, " ".join(reasons + disabled_reason), evidence=sorted(reviewed))
+    workflow = "enabled workflow uses" if len(unmarked) == 1 else "enabled workflows use"
     reason = f"{len(unmarked)} {workflow} pull_request_target without a zizmor ignore comment."
-    return Result(MISSING, reason, evidence=unmarked)
+    # The disabled ones should be deleted, so they are listed with the ones to fix.
+    return Result(MISSING, " ".join([reason, *disabled_reason]), evidence=sorted(unmarked + off))
+
+
+def names(paths: list[str]) -> str:
+    names = [PurePosixPath(path).name for path in paths]
+    return names[0] if len(names) == 1 else f"{', '.join(names[:-1])} and {names[-1]}"
 
 
 TOPIC = Topic(
@@ -31,11 +45,13 @@ TOPIC = Topic(
     meanings={
         DONE: "None of its workflows runs on `pull_request_target`.",
         PARTIAL: (
-            "Its workflows that run on `pull_request_target` are all marked as reviewed with a zizmor ignore comment."
-            " It needs an event policy that allows the event."
+            "Its workflows that run on `pull_request_target` are all disabled or marked as reviewed with a zizmor"
+            " ignore comment. The enabled ones need an event policy that allows the event, and the disabled ones"
+            " should be deleted."
         ),
         MISSING: (
-            "At least one of its workflows runs on `pull_request_target` and does not have a zizmor ignore comment."
+            "At least one of its enabled workflows runs on `pull_request_target` and does not have a zizmor ignore"
+            " comment. Any disabled ones should be deleted."
         ),
         NOT_APPLICABLE: "The repository has no GitHub workflows.",
     },

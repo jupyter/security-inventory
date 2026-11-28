@@ -23,7 +23,7 @@ scripts/1..8  ──►  output/*.json, *.csv, *.txt  ──►  docs/insights.p
 | Step | Script | Reads | Writes |
 |---|---|---|---|
 | 1 | `1_inventory.py` | `ORGS`, GitHub | `repos.json` |
-| 2 | `2_scan_repos.py` | `repos.json`, GitHub clones | `scan.json` |
+| 2 | `2_scan_repos.py` | `repos.json`, GitHub clones and API | `scan.json` |
 | 3 | `3_packages.py` | `repos.json`, `scan.json`, PyPI, npm, pypistats, deps.dev | `packages.json` |
 | 4 | `4_images.py` | `NAMESPACES`, `repos.json`, `scan.json`, Docker Hub, Quay | `images.json`, `images.txt` |
 | 5 | `5_classify.py` | `repos.json`, `scan.json`, `packages.json`, clones, LLM | `classification.json` |
@@ -38,9 +38,9 @@ asks (up to 5 minutes). `RETRIES` counts the retries. `Progress` shows how far a
 terminal.
 
 Step 2 keeps, for each repo: file counts by type, the packages its manifests declare, a summary of its workflows
-(triggers, secrets, what they publish, and which run on pull_request_target and whether a zizmor comment marks them
-as reviewed), the actions it uses, the images its chartpress files build, the build
-requirements of its `pyproject.toml`, the start of its README, its SECURITY.md and the emails in it, and which of a few words (zizmor, pre-commit) its CI files and
+(triggers, secrets, what they publish, and which run on pull_request_target, whether a zizmor comment marks them
+as reviewed and which of them GitHub reports as disabled), the actions it uses, the images its chartpress files build,
+the build requirements of its `pyproject.toml`, the start of its README, its SECURITY.md and the emails in it, and which of a few words (zizmor, pre-commit) its CI files and
 pre-commit config mention. A clone is shallow and holds only those files.
 Symbolic links are never followed.
 

@@ -5,7 +5,8 @@ GitHub workflows do, the GitHub Actions it uses, the container images its chartp
 which words its CI and pre-commit config mention, the emails of its SECURITY.md, and the start of its README.
 Only those few files are downloaded; for everything else the clone holds just the file names.
 
-Usage: python scripts/2_scan_repos.py --clone-dir /tmp/clones    Output: output/scan.json
+Usage: python scripts/2_scan_repos.py --clone-dir /tmp/clones    Needs: the GitHub CLI (`gh auth login`).
+Output: output/scan.json
 """
 
 import argparse
@@ -255,6 +256,13 @@ def summarize_workflows(workflows: dict[str, str]) -> dict:
     }
 
 
+def disabled_workflows(full_name: str) -> list[str]:
+    """The paths of the repo's disabled workflows. Only GitHub knows this: the files don't say."""
+    query = '.workflows[] | select(.state | startswith("disabled")) | .path'
+    command = ["gh", "api", "--paginate", f"repos/{full_name}/actions/workflows", "--jq", query]
+    return sorted(subprocess.run(command, capture_output=True, text=True, check=True).stdout.splitlines())
+
+
 def scan(full_name: str, clone_dir: Path) -> dict:
     folder = clone_dir / full_name
     clone(full_name, folder)
@@ -287,12 +295,16 @@ def scan(full_name: str, clone_dir: Path) -> dict:
     ci_files = {path: read(path) for path in workflows + actions}
     ci_text = "\n".join(ci_files.values())
     pre_commit = {path: read(path) for path in to_read if path == PRE_COMMIT_CONFIG}
+    summary = summarize_workflows({path: read(path) for path in workflows})
+    # Asked only where it matters, to spend one API call on a few dozen repos instead of all of them.
+    if summary["pull_request_target"]:
+        summary["disabled"] = [path for path in disabled_workflows(full_name) if path in summary["pull_request_target"]]
     return {
         "head": git(folder, "rev-parse", "HEAD").strip(),
         "n_files": len(paths),
         "file_types": dict(Counter(file_type(path) for path in paths)),
         "packages": packages,
-        "workflows": summarize_workflows({path: read(path) for path in workflows}),
+        "workflows": summary,
         "uses": sorted({f"{repo}@{ref}" for repo, ref in re.findall(USES, ci_text)}),
         "images": sorted({image for path in chartpress for image in chartpress_images(read(path))}),
         "build_requires": sorted(build_requirements),

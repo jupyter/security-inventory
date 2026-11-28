@@ -33,7 +33,7 @@ platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
 
 [tool.pixi.dependencies]
 python = "3.14.*"  # as in CI
-gh = "*"  # step 1 calls the GitHub CLI
+gh = "*"  # steps 1 and 2 call the GitHub CLI
 
 [tool.pixi.environments]
 default = ["dev", "docs"]

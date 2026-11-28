@@ -2,9 +2,9 @@ A workflow that is triggered by the `pull_request_target` event has access to th
 
 GitHub will start blocking workflow runs triggered by `pull_request_target` by default starting December 2, 2026 (though we may extend that deadline with an org-wide policy).
 
-To detect workflows using `pull_request_target`, we look for `pull_request_target` in the `on` key of each workflow in `.github/workflows`, and we also look for a `zizmor: ignore[dangerous-triggers]` comment which indicates the workflow has been manually reviewed and judged safe.
+To detect workflows using `pull_request_target`, we look for `pull_request_target` in the `on` key of each workflow in `.github/workflows`, and we also look for a `zizmor: ignore[dangerous-triggers]` comment which indicates the workflow has been manually reviewed and judged safe. We also ask GitHub which of these workflows are disabled: a disabled workflow does not run, so it counts like a reviewed one.
 
-Example of a workflow counted as `missing` and needs to be evaluated and fixed:
+Example of a workflow counted as `missing`, unless it is disabled, and needs to be evaluated and fixed:
 
 ```yaml
 on:
@@ -12,7 +12,7 @@ on:
     ...
 ```
 
-Example of a workflow counted as `partial` since it has a zizmor comment indicating the workflow has been reviewed and judged safe. We will still need to set up a policy to allow the `pull_request_target` event.
+Example of a workflow counted as `partial` since it has a zizmor comment indicating the workflow has been reviewed and judged safe. We will still need to set up a policy to allow the `pull_request_target` event for it. A disabled workflow also counts as `partial`, but it should be deleted rather than allowed.
 
 ```yaml
 on:
@@ -20,7 +20,7 @@ on:
     ...
 ```
 
-To list the workflows in a repo that still need to be fixed, run this in the repo.
+To list the workflows in a repo that still need to be fixed, run this in the repo. It reads only the files, so it also lists disabled workflows: `gh workflow list --all` shows which ones are disabled.
 
 ```sh
 for f in .github/workflows/*.y*ml; do grep -qE '^ *(on:.*|- *)?pull_request_target' "$f" && ! grep -q 'zizmor: *ignore\[[^]]*dangerous-triggers' "$f" && echo "$f"; done
